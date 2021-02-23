@@ -3,6 +3,7 @@ import axios from 'axios';
 import { Link, Redirect } from 'react-router-dom';
 import "react-datepicker/dist/react-datepicker.css";
 import styles from '../../assets/css/style.module.css'
+import logo from './logo.jpeg'
 
 
 export default class LoginForm extends Component{
