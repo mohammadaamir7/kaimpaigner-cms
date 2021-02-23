@@ -25,16 +25,11 @@
     "web-vitals": "^1.1.0"
   },
   "scripts": {
-    "start": "node Back-End/server/app.js",
-    "build": "NPM_CONFIG_PRODUCTION=false npm install npm && run build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
-    
   },
-
- "engines": {
-    "node": "13.13.0"
-},
   "eslintConfig": {
     "extends": [
       "react-app",
