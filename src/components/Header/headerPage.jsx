@@ -405,7 +405,7 @@ export default class HeaderPage extends Component{
         axios.post('https://kaimpaigner-cms-backend.herokuapp.com/api/updateProcess', process)
         .then(res => {
             console.log(res.data)
-            return <Redirect to = '/dashboard' />
+            window.location = '/dashboard'
             
         })
         .catch(err => {

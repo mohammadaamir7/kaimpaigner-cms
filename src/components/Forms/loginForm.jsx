@@ -91,7 +91,7 @@ onSubmit(e){
             loggedIn: true
           })
 
-          //window.location = '/dashboard'
+          window.location = '/dashboard'
           
         })
         .catch(err => {

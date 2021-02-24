@@ -65,7 +65,7 @@ export default class addCompaign extends Component{
                 .then(res => console.log(res.data))
                 .catch(err => console.log("err" + err))
     
-            return window.location = '/addCampaign'
+            window.location = '/addCampaign'
         }
 
         
