@@ -161,7 +161,7 @@ export default class ForgotPassword extends Component{
 
     localStorage.removeItem('email')
     
-    axios.get('http://localhost:5000/api/listUsers')
+    axios.get('https://kaimpaigner-cms-backend.herokuapp.com/api/listUsers')
     .then(res => {
       this.setState({users: res.data})
     })

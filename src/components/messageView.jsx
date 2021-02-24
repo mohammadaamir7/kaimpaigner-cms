@@ -74,7 +74,7 @@ export default class MessageView extends Component{
 
   componentDidMount(){
       
-    axios.get('http://localhost:5000/api/listMessage/' + this.props.match.params.id)
+    axios.get('https://kaimpaigner-cms-backend.herokuapp.com/api/listMessage/' + this.props.match.params.id)
     .then((res) => {
         this.setState({ messages: res.data })
         console.log("Messages : " + this.state.messages)
@@ -83,7 +83,7 @@ export default class MessageView extends Component{
         console.log(error);
   })
 
-  axios.get('http://localhost:5000/api/' + this.props.match.params.id)
+  axios.get('https://kaimpaigner-cms-backend.herokuapp.com/api/' + this.props.match.params.id)
     .then((res) => {
         this.setState({ campaign: res.data })
         
@@ -102,7 +102,7 @@ export default class MessageView extends Component{
 }
 
   deleteMessage(id) {
-    axios.delete('http://localhost:5000/api/deleteMessage/'+id)
+    axios.delete('https://kaimpaigner-cms-backend.herokuapp.com/api/deleteMessage/'+id)
       .then(response => { console.log(response.data)});
 
     this.setState({

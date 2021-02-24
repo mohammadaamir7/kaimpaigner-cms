@@ -61,7 +61,7 @@ export default class addCompaign extends Component{
                 creationDate: this.state.creationDate
             }
     
-            axios.post('http://localhost:5000/api/addCompaign', compaign)
+            axios.post('https://kaimpaigner-cms-backend.herokuapp.com/api/addCompaign', compaign)
                 .then(res => console.log(res.data))
                 .catch(err => console.log("err" + err))
     

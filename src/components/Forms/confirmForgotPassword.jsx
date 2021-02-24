@@ -56,7 +56,7 @@ onSubmit(e){
 
     localStorage.removeItem('email')
 
-    axios.post('http://localhost:5000/api/updatePassword', user)
+    axios.post('https://kaimpaigner-cms-backend.herokuapp.com/api/updatePassword', user)
         .then(res => console.log(res.data))
         .catch(err => console.log("err"))
         window.location = '/loginForm'

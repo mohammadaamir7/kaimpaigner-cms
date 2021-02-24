@@ -40,7 +40,7 @@ export default class addFieldOperation extends Component{
     }
 
     componentDidMount(){
-        axios.get('http://localhost:5000/api/' + this.props.match.params.id)
+        axios.get('https://kaimpaigner-cms-backend.herokuapp.com/api/' + this.props.match.params.id)
         .then((res) => {
             this.setState({ campaign: res.data })
             
@@ -49,7 +49,7 @@ export default class addFieldOperation extends Component{
             console.log(error);
         })
 
-        axios.get('http://localhost:5000/api/listEvent/' + localStorage.getItem("username"))
+        axios.get('https://kaimpaigner-cms-backend.herokuapp.com/api/listEvent/' + localStorage.getItem("username"))
         .then(res => {
             
             this.setState({events: res.data})
@@ -181,7 +181,7 @@ export default class addFieldOperation extends Component{
                                 createdBy: localStorage.getItem("username")
                             }
                     
-                            axios.post('http://localhost:5000/api/addFieldOperation/' + this.props.match.params.id, event)
+                            axios.post('https://kaimpaigner-cms-backend.herokuapp.com/api/addFieldOperation/' + this.props.match.params.id, event)
                                 .then(res => {
                                     console.log(res.data)
                                     
@@ -205,7 +205,7 @@ export default class addFieldOperation extends Component{
                                     createdBy: localStorage.getItem("username")
                                 }
                         
-                                axios.post('http://localhost:5000/api/addFieldOperation/' + this.props.match.params.id, event)
+                                axios.post('https://kaimpaigner-cms-backend.herokuapp.com/api/addFieldOperation/' + this.props.match.params.id, event)
                                     .then(res => {
                                         console.log(res.data)
                                         

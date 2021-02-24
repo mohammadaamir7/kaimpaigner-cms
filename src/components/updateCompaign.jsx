@@ -31,7 +31,7 @@ export default class updateCompaign extends Component{
     }
 
     componentDidMount(){
-        axios.get('http://localhost:5000/api/' + this.props.match.params.id)
+        axios.get('https://kaimpaigner-cms-backend.herokuapp.com/api/' + this.props.match.params.id)
         .then(res => {
             this.setState({campaign: res.data})
             this.setState({name: this.state.campaign.name})
@@ -73,7 +73,7 @@ export default class updateCompaign extends Component{
                 creationDate: this.state.creationDate
             }
     
-            axios.post('http://localhost:5000/api/updateCompaign/' + this.props.match.params.id, compaign)
+            axios.post('https://kaimpaigner-cms-backend.herokuapp.com/api/updateCompaign/' + this.props.match.params.id, compaign)
                 .then(res => console.log(res.data))
                 .catch(err => console.log("err" + err))
     

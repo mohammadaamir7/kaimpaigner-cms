@@ -106,7 +106,7 @@ export default class listCompaign extends Component{
             fontSize: "-=5%"
           })
         })
-        axios.get('http://localhost:5000/api/listCompaign/' + localStorage.getItem("username"))
+        axios.get('https://kaimpaigner-cms-backend.herokuapp.com/api/listCompaign/' + localStorage.getItem("username"))
             .then((res) => {
                 this.setState({ compaigns: res.data })
                       
@@ -134,7 +134,7 @@ export default class listCompaign extends Component{
     }
 
     deleteCompaign(id){
-        axios.delete('http://localhost:5000/api/'+id)
+        axios.delete('https://kaimpaigner-cms-backend.herokuapp.com/api/'+id)
             .then(response =>  console.log(response.data));
 
         

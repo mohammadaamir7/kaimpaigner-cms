@@ -27,7 +27,7 @@ export default class CampaignOverview extends Component{
 
   componentDidMount(){
       
-    axios.get('http://localhost:5000/api/' + this.props.match.params.id)
+    axios.get('https://kaimpaigner-cms-backend.herokuapp.com/api/' + this.props.match.params.id)
     .then((res) => {
         this.setState({ campaign: res.data })
         
@@ -46,7 +46,7 @@ export default class CampaignOverview extends Component{
  
 
 deleteCompaign(id){
-  axios.delete('http://localhost:5000/api/'+id)
+  axios.delete('https://kaimpaigner-cms-backend.herokuapp.com/api/'+id)
       .then(response =>  console.log(response.data));
 
   

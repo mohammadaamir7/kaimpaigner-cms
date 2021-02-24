@@ -186,7 +186,7 @@ export default class HeaderPage extends Component{
         })
 
 
-        axios.get('http://localhost:5000/api/listEvent/' + localStorage.getItem("username"))
+        axios.get('https://kaimpaigner-cms-backend.herokuapp.com/api/listEvent/' + localStorage.getItem("username"))
                 .then(res => {
                     
                     this.setState({events: res.data})
@@ -196,7 +196,7 @@ export default class HeaderPage extends Component{
                     console.log(error);
             })
 
-            axios.get('http://localhost:5000/api/listEvent/' + localStorage.getItem("username"))
+            axios.get('https://kaimpaigner-cms-backend.herokuapp.com/api/listEvent/' + localStorage.getItem("username"))
             .then(res => {
                 
                 this.setState({events2: res.data})
@@ -206,7 +206,7 @@ export default class HeaderPage extends Component{
                 console.log(error);
         })
 
-            axios.get('http://localhost:5000/api/countProcess/' + localStorage.getItem("username"))
+            axios.get('https://kaimpaigner-cms-backend.herokuapp.com/api/countProcess/' + localStorage.getItem("username"))
                 .then(res => {
                     this.setState({dashboardData: res.data})
                  })
@@ -239,7 +239,7 @@ export default class HeaderPage extends Component{
     
     deleteProcess(id) {
         
-        axios.delete('http://localhost:5000/api/deleteProcess/' + id)
+        axios.delete('https://kaimpaigner-cms-backend.herokuapp.com/api/deleteProcess/' + id)
           .then(response => {
               window.location = '/dashboard' 
               console.log(response.data)
@@ -402,7 +402,7 @@ export default class HeaderPage extends Component{
             id: this.state.p_title
         }
 
-        axios.post('http://localhost:5000/api/updateProcess', process)
+        axios.post('https://kaimpaigner-cms-backend.herokuapp.com/api/updateProcess', process)
         .then(res => {
             console.log(res.data)
             return <Redirect to = '/dashboard' />

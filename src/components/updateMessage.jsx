@@ -51,7 +51,7 @@ export default class UpdateMessage extends Component{
   componentDidMount(){
     
           
-    axios.get('http://localhost:5000/api/' + this.props.match.params.id_1)
+    axios.get('https://kaimpaigner-cms-backend.herokuapp.com/api/' + this.props.match.params.id_1)
     .then((res) => {
         this.setState({ campaign: res.data })
 
@@ -60,7 +60,7 @@ export default class UpdateMessage extends Component{
         console.log(error);
   })
 
-  axios.get('http://localhost:5000/api/findMessage/' + this.props.match.params.id_2)
+  axios.get('https://kaimpaigner-cms-backend.herokuapp.com/api/findMessage/' + this.props.match.params.id_2)
     .then((res) => {
         this.setState({ message: res.data })
 
@@ -467,7 +467,7 @@ onSubmit(e){
     }
 
 
-    axios.post('http://localhost:5000/api/updateMessage/' + this.props.match.params.id_1 + '/' + this.props.match.params.id_2 , message)
+    axios.post('https://kaimpaigner-cms-backend.herokuapp.com/api/updateMessage/' + this.props.match.params.id_1 + '/' + this.props.match.params.id_2 , message)
         .then(res => console.log(res.data))
         .catch(err => console.log("err"))
         window.location = '/messageView/' + this.props.match.params.id_1

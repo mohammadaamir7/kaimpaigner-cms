@@ -50,7 +50,7 @@ export default class AddMessage extends Component{
   componentDidMount(){
     
           
-    axios.get('http://localhost:5000/api/' + this.props.match.params.id)
+    axios.get('https://kaimpaigner-cms-backend.herokuapp.com/api/' + this.props.match.params.id)
     .then((res) => {
         this.setState({ campaign: res.data })
         
@@ -321,7 +321,7 @@ onSubmit(e){
     }
 
 
-    axios.post('http://localhost:5000/api/addMessage/' + this.props.match.params.id , message)
+    axios.post('https://kaimpaigner-cms-backend.herokuapp.com/api/addMessage/' + this.props.match.params.id , message)
         .then(res => console.log(res.data))
         .catch(err => console.log("err"))
         window.location = '/addMessage/' + this.props.match.params.id
