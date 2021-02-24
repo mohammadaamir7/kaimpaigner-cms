@@ -35,7 +35,7 @@ export default class RegisterForm extends Component{
   componentDidMount(){
 
     localStorage.removeItem('email')
-    axios.get('http://kaimpaigner-cms-backend.herokuapp.com/api/listUsers')
+    axios.get('https://kaimpaigner-cms-backend.herokuapp.com/api/listUsers')
     .then(res => {
       this.setState({users: res.data})
     })
@@ -89,7 +89,7 @@ onSubmit(e){
                 password: this.state.password
             }
 
-            axios.post('http://kaimpaigner-cms-backend.herokuapp.com/api/registration', user)
+            axios.post('https://kaimpaigner-cms-backend.herokuapp.com/api/registration', user)
                 .then(res => console.log(res.data))
                 .catch(err => console.log("err"))
                 window.location = '/loginForm'
