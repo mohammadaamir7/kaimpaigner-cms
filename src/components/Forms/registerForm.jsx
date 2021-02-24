@@ -35,7 +35,7 @@ export default class RegisterForm extends Component{
   componentDidMount(){
 
     localStorage.removeItem('email')
-    axios.get('https://https://kaimpaigner-cms-backend.herokuapp.com/api/listUsers')
+    axios.get('https://kaimpaigner-cms-backend.herokuapp.com/api/listUsers')
     .then(res => {
       this.setState({users: res.data})
     })
