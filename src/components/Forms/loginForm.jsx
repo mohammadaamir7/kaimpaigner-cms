@@ -91,14 +91,14 @@ onSubmit(e){
             loggedIn: true
           })
 
-          window.location = '/dashboard'
+          
           
         })
         .catch(err => {
           alert("Invalid email or password.")
           console.log("err")
         })
-        
+        window.location = '/dashboard'
     
     }else{
       document.userForm.classList.add('was-validated')
