@@ -158,7 +158,7 @@ onSubmit(e){
               <input type="password" className="form-control" value={this.state.confirmPassword} onChange={this.onChangeConfirmPassword}  style={{width:"300px", fontSize: 12}} placeholder="Confirm Password" required/>
             </div>
             
-            <button type="submit" className={[styles['btnStyle'] , 'btn btn-primary'].join(' ')} style={{backgroundColor:'#214d8a', borderRadius:0, fontSize:10}}>Sing Up</button>
+            <button type="submit" className={[styles['btnStyle'] , 'btn btn-primary'].join(' ')} style={{backgroundColor:'#214d8a', borderRadius:0, fontSize:10}}>Sign Up</button>
             <br/><br/>
 
             <p className={styles.pStyle}>Already have an account? <strong><Link className={styles.linkStyle} to='/loginForm'>Sign in</Link></strong></p>

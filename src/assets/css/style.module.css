@@ -28,10 +28,12 @@
     color: #ffffff;
     padding-left: 12.5%;
     padding-top: 3.5%;
+    text-decoration: none !important;
 }
 
 .btnStyle:hover{
     color: #ffffff;
+    text-decoration: none !important;
 }
 
 .divPos{
@@ -107,10 +109,12 @@
 
   .linkStyle{
       color: #000000;
+      text-decoration: none !important;
   }
 
   .linkStyle:hover{
-    columns: #000000;;
+    columns: #000000;
+    text-decoration: none !important;
 }
 
 
@@ -420,6 +424,15 @@
     height: 92%;
     width: 105%;
     margin-top: 5%;
+    text-decoration: none !important;
+}
+
+.whiteDiv3:hover{
+    text-decoration: none !important;
+}
+
+.whiteDiv3:hover{
+    text-decoration: none !important;
 }
 
 .whiteDiv4{
@@ -427,6 +440,7 @@
     height: 92%;
     width: 105%;
     box-shadow: 6px 10px 10px #e3e3e3;
+    text-decoration: none !important;
 }
 
 .navLink2{
@@ -441,11 +455,13 @@
     transition: background 0.2s ease-in;
     border: 0;
     text-align: left;
+    text-decoration: none !important;
 }
 
 .navLink2:hover{
     background:#406a94;
     color: #ffffff;
+    text-decoration: none !important;
 }
 
 .navLink2:active{
@@ -456,6 +472,11 @@
 .divAnchor{
     height: 100%;
     width: 100%;
+    text-decoration: none !important;
+}
+
+.divAnchor:hover{
+    text-decoration: none !important;
 }
 /*************** Campaigns *******************/
 
@@ -509,12 +530,14 @@
     margin-right: 5%;
     margin-left: 5%;
     font-weight: bold;
+    text-decoration: none !important;
 }
 
 .navLink3:hover{
     background:#6cabfc;
     color: #000000;
     border-radius: 5px;
+    text-decoration: none !important;
 }
 
 .navLink4{
