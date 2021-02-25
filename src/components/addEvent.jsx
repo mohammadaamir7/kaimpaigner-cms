@@ -6,6 +6,9 @@ import "react-datepicker/dist/react-datepicker.css";
 import styles from '../assets/css/style.module.css'
 import uil from './uil_process.png'
 import arrow from './mdi_arrow_back_ios.png'
+import grid from '../assets/img/grid.png'
+import volume from '../assets/img/volume.png'
+import Vector from '../assets/img/Vector.png'
 
 export default class addEvent extends Component{
     constructor(props){
@@ -270,11 +273,11 @@ export default class addEvent extends Component{
               <div className={styles.divPosDash}>
                 
                             
-                  <img src={require('../assets/img/Vector.png')} style={{marginLeft:20}}/>
+                  <img src={Vector} style={{marginLeft:20}}/>
                   <div className={styles.borderStyle} style={{marginRight:20}}></div>
                   <br/>
-                  <Link to="/dashboard" className={styles.navLink2}><img src={require('../assets/img/grid.png')} style={{marginRight:10, paddingLeft:10}} />Dashboard</Link>
-                  <Link to={"/listCompaign/" + localStorage.getItem("username")} className={styles.navLink2}><img src={require('../assets/img/volume.png')} style={{marginRight:10, paddingLeft:10}} />Campaign</Link>
+                  <Link to="/dashboard" className={styles.navLink2}><img src={grid} style={{marginRight:10, paddingLeft:10}} />Dashboard</Link>
+                  <Link to={"/listCompaign/" + localStorage.getItem("username")} className={styles.navLink2}><img src={volume} style={{marginRight:10, paddingLeft:10}} />Campaign</Link>
                </div>
            </div>
 
