@@ -4,6 +4,8 @@ import { Link, Redirect } from 'react-router-dom';
 import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
 import styles from '../assets/css/style.module.css'
+import uil from '../assets/img/uil_process.png'
+import arrow from '../assets/img/mdi_arrow_back_ios.png'
 
 export default class addEvent extends Component{
     constructor(props){
@@ -302,15 +304,15 @@ export default class addEvent extends Component{
                     <br/>
                     <h3>Campaign Management System</h3><br/>
                     <h5>{this.state.campaign.name}</h5>
-                      <Link to={"/addEvent/" + this.props.match.params.id} className={styles.navLink3}><img src={require('../assets/img/uil_process.png')} style={{marginRight:10, paddingLeft:10}} />Event</Link>
-                      <Link to={"/addDigitalAdd/" + this.props.match.params.id} className={styles.navLink3}><img src={require('../assets/img/uil_process.png')} style={{marginRight:10, paddingLeft:10}} />Digital Add</Link>
-                      <Link to={"/addFieldOperation/" + this.props.match.params.id} className={styles.navLink3}><img src={require('../assets/img/uil_process.png')} style={{marginRight:10, paddingLeft:10}} />Field Operation</Link>
-                      <Link to={"/addPaidAdvertisement/" + this.props.match.params.id} className={styles.navLink3}><img src={require('../assets/img/uil_process.png')} style={{marginRight:10, paddingLeft:10}} />Paid Advertisement</Link>
-                      <Link to={"/addOOHAdvertisement/" + this.props.match.params.id} className={styles.navLink3}><img src={require('../assets/img/uil_process.png')} style={{marginRight:10, paddingLeft:10}} />OOH Advertisement</Link>
-                      <Link to={"/addMailbox/" + this.props.match.params.id} className={styles.navLink3}><img src={require('../assets/img/uil_process.png')} style={{marginRight:10, paddingLeft:10}} />Mailbox</Link>
-                      <Link to={"/addResearchPlanning/" + this.props.match.params.id} className={styles.navLink3}><img src={require('../assets/img/uil_process.png')} style={{marginRight:10, paddingLeft:10}} />Research Planning</Link>
+                      <Link to={"/addEvent/" + this.props.match.params.id} className={styles.navLink3}><img src={uil} style={{marginRight:10, paddingLeft:10}} />Event</Link>
+                      <Link to={"/addDigitalAdd/" + this.props.match.params.id} className={styles.navLink3}><img src={uil} style={{marginRight:10, paddingLeft:10}} />Digital Add</Link>
+                      <Link to={"/addFieldOperation/" + this.props.match.params.id} className={styles.navLink3}><img src={uil} style={{marginRight:10, paddingLeft:10}} />Field Operation</Link>
+                      <Link to={"/addPaidAdvertisement/" + this.props.match.params.id} className={styles.navLink3}><img src={uil} style={{marginRight:10, paddingLeft:10}} />Paid Advertisement</Link>
+                      <Link to={"/addOOHAdvertisement/" + this.props.match.params.id} className={styles.navLink3}><img src={uil} style={{marginRight:10, paddingLeft:10}} />OOH Advertisement</Link>
+                      <Link to={"/addMailbox/" + this.props.match.params.id} className={styles.navLink3}><img src={uil} style={{marginRight:10, paddingLeft:10}} />Mailbox</Link>
+                      <Link to={"/addResearchPlanning/" + this.props.match.params.id} className={styles.navLink3}><img src={uil} style={{marginRight:10, paddingLeft:10}} />Research Planning</Link>
 
-                      <Link to={"/listCompaign/" + localStorage.getItem('username')} className={styles.navLink4} style={{position:"absolute", top: "90%"}}><img src={require('../assets/img/mdi_arrow_back_ios.png')} style={{marginRight:10, paddingLeft:10}} />Back</Link>
+                      <Link to={"/listCompaign/" + localStorage.getItem('username')} className={styles.navLink4} style={{position:"absolute", top: "90%"}}><img src={arrow} style={{marginRight:10, paddingLeft:10}} />Back</Link>
                       
                   </div>
 

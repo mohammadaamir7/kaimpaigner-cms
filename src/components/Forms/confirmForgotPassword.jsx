@@ -4,6 +4,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import styles from '../../assets/css/style.module.css'
 import { Button } from "react-bootstrap";
 import { Link, Redirect } from 'react-router-dom';
+import logo from './logo.jpeg'
 
 export default class ConfirmPassword extends Component{
   constructor(props){
@@ -90,7 +91,7 @@ onSubmit(e){
       <div className="row">
           <div className={[styles['backBlue'] , 'col-md-4'].join(' ')}>
             <div className={styles.divPos}>
-              <img src={require('./logo.jpeg')} style={{height:155,width:92}}/>
+              <img src={logo} style={{height:155,width:92}}/>
             </div>
 
             <div className={styles.divPos2}>

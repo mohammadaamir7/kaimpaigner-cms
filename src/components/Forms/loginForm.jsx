@@ -122,7 +122,7 @@ onSubmit(e){
       <div className="row">
           <div className={[styles['backBlue'] , 'col-md-4'].join(' ')}>
             <div className={styles.divPos}>
-            <img src={require('./logo.jpeg')} style={{height:155,width:92}}/>
+            <img src={logo} style={{height:155,width:92}}/>
             </div>
 
             <div className={styles.divPos2}>
