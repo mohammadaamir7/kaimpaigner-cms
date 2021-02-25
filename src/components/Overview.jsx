@@ -3,10 +3,15 @@ import axios from 'axios';
 import { Link, Redirect } from 'react-router-dom';
 import "react-datepicker/dist/react-datepicker.css";
 import styles from '../assets/css/style.module.css'
-
-
-
-
+import gridblack from '../assets/img/gridblack.png'
+import atsign from '../assets/img/at sign.png'
+import message from '../assets/img/Message.png'
+import uil from '../assets/img/uil_process.png'
+import arrow from '../assets/img/mdi_arrow_back_ios.png'
+import grid from '../assets/img/grid.png'
+import volume from '../assets/img/volume.png'
+import Vector from '../assets/img/Vector.png'
+import testimage from '../assets/img/test_image.jpg'
 
 export default class CampaignOverview extends Component{
   constructor(props){
@@ -77,11 +82,11 @@ window.location = '/listCompaign/' + localStorage.getItem('username')
               <div className={styles.divPosDash}>
                 
                             
-                  <img src={require('../assets/img/Vector.png')} style={{marginLeft:20}}/>
+                  <img src={Vector} style={{marginLeft:20}}/>
                   <div className={styles.borderStyle} style={{marginRight:20}}></div>
                   <br/>
-                  <Link to="/dashboard" className={styles.navLink2}><img src={require('../assets/img/grid.png')} style={{marginRight:10, paddingLeft:10}} />Dashboard</Link>
-                  <Link to={"/listCompaign/" + localStorage.getItem("username")} className={styles.navLink2}><img src={require('../assets/img/volume.png')} style={{marginRight:10, paddingLeft:10}} />Campaign</Link>
+                  <Link to="/dashboard" className={styles.navLink2}><img src={grid} style={{marginRight:10, paddingLeft:10}} />Dashboard</Link>
+                  <Link to={"/listCompaign/" + localStorage.getItem("username")} className={styles.navLink2}><img src={volume} style={{marginRight:10, paddingLeft:10}} />Campaign</Link>
                </div>
            </div>
 
@@ -105,14 +110,14 @@ window.location = '/listCompaign/' + localStorage.getItem('username')
                     <br/>
                     <h3>Campaign Management System</h3><br/>
                     <h5>{this.state.campaign.name}</h5>
-                      <Link to={"/campaignOverview/" + this.props.match.params.id} className={styles.navLink3}><img src={require('../assets/img/gridblack.png')} style={{marginRight:10, paddingLeft:10}} />Overview</Link>
-                      <Link to={"/addMessage/" + this.props.match.params.id} className={styles.navLink3}><img src={require('../assets/img/at sign.png')} style={{marginRight:10, paddingLeft:10}} />Daily Message</Link>
-                      <Link to={"/messageView/" + this.props.match.params.id} className={styles.navLink3}><img src={require('../assets/img/Message.png')} style={{marginRight:10, paddingLeft:10}} />Message</Link>
-                      <Link to={"/addEvent/" + this.props.match.params.id} className={styles.navLink3}><img src={require('../assets/img/uil_process.png')} style={{marginRight:10, paddingLeft:10}} />Process</Link>
-                      <Link to={"/updateCompaign/" + this.props.match.params.id} className={styles.navLink3}><img src={require('../assets/img/gridblack.png')} style={{marginRight:10, paddingLeft:10}} />Update</Link>
-                      <button onClick={() => { this.deleteCompaign(this.props.match.params.id) }} className={styles.navbutton}><img src={require('../assets/img/gridblack.png')} style={{marginRight:10, paddingLeft: 0}} />Delete</button>
+                      <Link to={"/campaignOverview/" + this.props.match.params.id} className={styles.navLink3}><img src={gridblack} style={{marginRight:10, paddingLeft:10}} />Overview</Link>
+                      <Link to={"/addMessage/" + this.props.match.params.id} className={styles.navLink3}><img src={atsign} style={{marginRight:10, paddingLeft:10}} />Daily Message</Link>
+                      <Link to={"/messageView/" + this.props.match.params.id} className={styles.navLink3}><img src={message} style={{marginRight:10, paddingLeft:10}} />Message</Link>
+                      <Link to={"/addEvent/" + this.props.match.params.id} className={styles.navLink3}><img src={uil} style={{marginRight:10, paddingLeft:10}} />Process</Link>
+                      <Link to={"/updateCompaign/" + this.props.match.params.id} className={styles.navLink3}><img src={gridblack} style={{marginRight:10, paddingLeft:10}} />Update</Link>
+                      <button onClick={() => { this.deleteCompaign(this.props.match.params.id) }} className={styles.navbutton}><img src={gridblack} style={{marginRight:10, paddingLeft: 0}} />Delete</button>
 
-                      <Link to={"/listCompaign/" + localStorage.getItem('username')} className={styles.navLink4} style={{position:"absolute", top: "90%"}}><img src={require('../assets/img/mdi_arrow_back_ios.png')} style={{marginRight:10, paddingLeft:10}} />Back</Link>
+                      <Link to={"/listCompaign/" + localStorage.getItem('username')} className={styles.navLink4} style={{position:"absolute", top: "90%"}}><img src={arrow} style={{marginRight:10, paddingLeft:10}} />Back</Link>
                       
                   </div>
 
@@ -130,7 +135,7 @@ window.location = '/listCompaign/' + localStorage.getItem('username')
                            {/* <div style={{border: "1px solid #000000", height: 150, width: "60%"}}>
                                 Campaign Image
                            </div> */}
-                           <img src={require('../assets/img/test_image.jpg')} style={{height: "200px", width: "90%"}}/>
+                           <img src={testimage} style={{height: "200px", width: "90%"}}/>
                         </div>
                     </div>
                     <br/>

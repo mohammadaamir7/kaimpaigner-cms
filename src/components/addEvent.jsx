@@ -4,8 +4,8 @@ import { Link, Redirect } from 'react-router-dom';
 import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
 import styles from '../assets/css/style.module.css'
-import uil from './uil_process.png'
-import arrow from './mdi_arrow_back_ios.png'
+import uil from '../assets/img/uil_process.png'
+import arrow from '../assets/img/mdi_arrow_back_ios.png'
 import grid from '../assets/img/grid.png'
 import volume from '../assets/img/volume.png'
 import Vector from '../assets/img/Vector.png'

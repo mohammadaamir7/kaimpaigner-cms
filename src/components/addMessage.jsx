@@ -5,8 +5,26 @@ import { Button } from "react-bootstrap";
 import $, { css } from 'jquery';
 import "react-datepicker/dist/react-datepicker.css";
 import styles from '../assets/css/style.module.css';
-
-
+import gridblack from '../assets/img/gridblack.png'
+import atsign from '../assets/img/at sign.png'
+import message from '../assets/img/Message.png'
+import uil from '../assets/img/uil_process.png'
+import arrow from '../assets/img/mdi_arrow_back_ios.png'
+import grid from '../assets/img/grid.png'
+import volume from '../assets/img/volume.png'
+import Vector from '../assets/img/Vector.png'
+import facebook from '../assets/img/bx_bxl-facebook(1).png'
+import viber from '../assets/img/jam_viber-circle.png'
+import newsletter from '../assets/img/jam_newsletter.png'
+import spotify from '../assets/img/tabler_brand-spotify.png'
+import youtube from '../assets/img/ant-design_youtube-outlined.png'
+import bing from '../assets/img/la_blog.png'
+import email from '../assets/img/line-md_email.png'
+import oped from '../assets/img/align center.png'
+import instagram from '../assets/img/instagram.png'
+import twitter from '../assets/img/twitter.png'
+import telegram from '../assets/img/tabler_brand-telegram.png'
+import website from '../assets/img/gg_website.png'
 
 export default class AddMessage extends Component{
   constructor(props){
@@ -357,11 +375,11 @@ onSubmit(e){
               <div className={styles.divPosDash}>
                 
                             
-                  <img src={require('../assets/img/Vector.png')} style={{marginLeft:20}}/>
+                  <img src={Vector} style={{marginLeft:20}}/>
                   <div className={styles.borderStyle} style={{marginRight:20}}></div>
                   <br/>
-                  <Link to="/dashboard" className={styles.navLink2}><img src={require('../assets/img/grid.png')} style={{marginRight:10, paddingLeft:10}} />Dashboard</Link>
-                  <Link to={"/listCompaign/" + localStorage.getItem("username")} className={styles.navLink2}><img src={require('../assets/img/volume.png')} style={{marginRight:10, paddingLeft:10}} />Campaign</Link>
+                  <Link to="/dashboard" className={styles.navLink2}><img src={grid} style={{marginRight:10, paddingLeft:10}} />Dashboard</Link>
+                  <Link to={"/listCompaign/" + localStorage.getItem("username")} className={styles.navLink2}><img src={volume} style={{marginRight:10, paddingLeft:10}} />Campaign</Link>
                </div>
            </div>
 
@@ -385,12 +403,12 @@ onSubmit(e){
                     <br/>
                     <h3>Campaign Management System</h3><br/>
                     <h5>{this.state.campaign.name}</h5>
-                      <Link to={"/campaignOverview/" + this.props.match.params.id} className={styles.navLink3}><img src={require('../assets/img/gridblack.png')} style={{marginRight:10, paddingLeft:10}} />Overview</Link>
-                      <Link to={"/addMessage/" + this.props.match.params.id} className={styles.navLink3}><img src={require('../assets/img/at sign.png')} style={{marginRight:10, paddingLeft:10}} />Daily Message</Link>
-                      <Link to={"/messageView/" + this.props.match.params.id} className={styles.navLink3}><img src={require('../assets/img/Message.png')} style={{marginRight:10, paddingLeft:10}} />Message</Link>
-                      <Link to={"/addEvent/" + this.props.match.params.id} className={styles.navLink3}><img src={require('../assets/img/uil_process.png')} style={{marginRight:10, paddingLeft:10}} />Process</Link>
+                      <Link to={"/campaignOverview/" + this.props.match.params.id} className={styles.navLink3}><img src={gridblack} style={{marginRight:10, paddingLeft:10}} />Overview</Link>
+                      <Link to={"/addMessage/" + this.props.match.params.id} className={styles.navLink3}><img src={atsign} style={{marginRight:10, paddingLeft:10}} />Daily Message</Link>
+                      <Link to={"/messageView/" + this.props.match.params.id} className={styles.navLink3}><img src={message} style={{marginRight:10, paddingLeft:10}} />Message</Link>
+                      <Link to={"/addEvent/" + this.props.match.params.id} className={styles.navLink3}><img src={uil} style={{marginRight:10, paddingLeft:10}} />Process</Link>
 
-                      <Link to={"/listCompaign/" + localStorage.getItem("username")} className={styles.navLink4} style={{position:"absolute", top: "90%"}}><img src={require('../assets/img/mdi_arrow_back_ios.png')} style={{marginRight:10, paddingLeft:10}} />Back</Link>
+                      <Link to={"/listCompaign/" + localStorage.getItem("username")} className={styles.navLink4} style={{position:"absolute", top: "90%"}}><img src={arrow} style={{marginRight:10, paddingLeft:10}} />Back</Link>
                   </div>
 
                   <div className="col-md-3">
@@ -438,37 +456,37 @@ onSubmit(e){
 
                             <div className="form-group">
                               <div style={{display: "flex"}}>
-                                <div onClick={this.FBClick} className={styles.iconBtn} id="click1" style={{backgroundColor: "#ffffff", color: "#000000", border: "none", fontSize: "100%", paddingTop: "2.5%", marginRight: "2%", width: "140px", height: "55px", borderRadius: "5px"}}><img src={require('../assets/img/bx_bxl-facebook(1).png')} style={{marginRight: "5px", marginLeft: "15%"}}/>Facebook</div>
-                                <div onClick={this.ViberClick} className={styles.iconBtn} id="click2" style={{backgroundColor: "#ffffff", color: "#000000", border: "none", fontSize: "100%", paddingTop: "2.5%", marginRight: "2%", width: "140px", height: "55px", borderRadius: "5px"}}><img src={require('../assets/img/jam_viber-circle.png')} style={{marginRight: "5px", marginLeft: "15%"}}/>Viber</div>
-                                <div onClick={this.NewsletterClick} className={styles.iconBtn} id="click3" style={{backgroundColor: "#ffffff", color: "#000000", border: "none", fontSize: "100%", paddingTop: "2.5%", marginRight: "2%", width: "140px", height: "55px", borderRadius: "5px"}}><img src={require('../assets/img/jam_newsletter.png')} style={{marginRight: "5px", marginLeft: "15%"}}/>Newsletter</div>
-                                <div onClick={this.BoostClick} className={styles.iconBtn} id="click4" style={{backgroundColor: "#ffffff", color: "#000000", border: "none", fontSize: "100%", paddingTop: "2.5%", marginRight: "2%", width: "140px", height: "55px", borderRadius: "5px"}}><img src={require('../assets/img/bx_bxl-facebook(1).png')} style={{marginRight: "5px", marginLeft: "15%"}}/>Boost</div>
+                                <div onClick={this.FBClick} className={styles.iconBtn} id="click1" style={{backgroundColor: "#ffffff", color: "#000000", border: "none", fontSize: "100%", paddingTop: "2.5%", marginRight: "2%", width: "140px", height: "55px", borderRadius: "5px"}}><img src={facebook} style={{marginRight: "5px", marginLeft: "15%"}}/>Facebook</div>
+                                <div onClick={this.ViberClick} className={styles.iconBtn} id="click2" style={{backgroundColor: "#ffffff", color: "#000000", border: "none", fontSize: "100%", paddingTop: "2.5%", marginRight: "2%", width: "140px", height: "55px", borderRadius: "5px"}}><img src={viber} style={{marginRight: "5px", marginLeft: "15%"}}/>Viber</div>
+                                <div onClick={this.NewsletterClick} className={styles.iconBtn} id="click3" style={{backgroundColor: "#ffffff", color: "#000000", border: "none", fontSize: "100%", paddingTop: "2.5%", marginRight: "2%", width: "140px", height: "55px", borderRadius: "5px"}}><img src={newsletter} style={{marginRight: "5px", marginLeft: "15%"}}/>Newsletter</div>
+                                <div onClick={this.BoostClick} className={styles.iconBtn} id="click4" style={{backgroundColor: "#ffffff", color: "#000000", border: "none", fontSize: "100%", paddingTop: "2.5%", marginRight: "2%", width: "140px", height: "55px", borderRadius: "5px"}}><img src={facebook} style={{marginRight: "5px", marginLeft: "15%"}}/>Boost</div>
                                 
                               </div>
 
                               <br/>
 
                               <div style={{display: "flex"}}>
-                                <div onClick={this.SpotifyClick} className={styles.iconBtn} id="click5" style={{backgroundColor: "#ffffff", color: "#000000", border: "none", fontSize: "100%", paddingTop: "2.5%", marginRight: "2%", width: "140px", height: "55px", borderRadius: "5px"}}><img src={require('../assets/img/tabler_brand-spotify.png')} style={{marginRight: "15px", marginLeft: "15%"}}/>Spotify</div>
-                                <div onClick={this.YoutubeClick} className={styles.iconBtn} id="click6" style={{backgroundColor: "#ffffff", color: "#000000", border: "none", fontSize: "100%", paddingTop: "2.5%", marginRight: "2%", width: "140px", height: "55px", borderRadius: "5px"}}><img src={require('../assets/img/ant-design_youtube-outlined.png')} style={{marginRight: "15px", marginLeft: "15%"}}/>Youtube</div>
-                                <div onClick={this.BingClick} className={styles.iconBtn} id="click7" style={{backgroundColor: "#ffffff", color: "#000000", border: "none", fontSize: "100%", paddingTop: "2.5%", marginRight: "2%", width: "140px", height: "55px", borderRadius: "5px"}}><img src={require('../assets/img/la_blog.png')} style={{marginRight: "5px", marginLeft: "15%"}}/>Bing</div>
-                                <div onClick={this.EmailClick} className={styles.iconBtn} id="click8" style={{backgroundColor: "#ffffff", color: "#000000", border: "none", fontSize: "100%", paddingTop: "2.5%", marginRight: "2%", width: "140px", height: "55px", borderRadius: "5px"}}><img src={require('../assets/img/line-md_email.png')} style={{marginRight: "5px", marginLeft: "15%"}}/>Direct Email</div>
+                                <div onClick={this.SpotifyClick} className={styles.iconBtn} id="click5" style={{backgroundColor: "#ffffff", color: "#000000", border: "none", fontSize: "100%", paddingTop: "2.5%", marginRight: "2%", width: "140px", height: "55px", borderRadius: "5px"}}><img src={spotify} style={{marginRight: "15px", marginLeft: "15%"}}/>Spotify</div>
+                                <div onClick={this.YoutubeClick} className={styles.iconBtn} id="click6" style={{backgroundColor: "#ffffff", color: "#000000", border: "none", fontSize: "100%", paddingTop: "2.5%", marginRight: "2%", width: "140px", height: "55px", borderRadius: "5px"}}><img src={youtube} style={{marginRight: "15px", marginLeft: "15%"}}/>Youtube</div>
+                                <div onClick={this.BingClick} className={styles.iconBtn} id="click7" style={{backgroundColor: "#ffffff", color: "#000000", border: "none", fontSize: "100%", paddingTop: "2.5%", marginRight: "2%", width: "140px", height: "55px", borderRadius: "5px"}}><img src={bing} style={{marginRight: "5px", marginLeft: "15%"}}/>Bing</div>
+                                <div onClick={this.EmailClick} className={styles.iconBtn} id="click8" style={{backgroundColor: "#ffffff", color: "#000000", border: "none", fontSize: "100%", paddingTop: "2.5%", marginRight: "2%", width: "140px", height: "55px", borderRadius: "5px"}}><img src={email} style={{marginRight: "5px", marginLeft: "15%"}}/>Direct Email</div>
                                 
                               </div>
 
                               <br/>
 
                               <div style={{display: "flex"}}>
-                                <div onClick={this.OPedClick} className={styles.iconBtn} id="click9" style={{backgroundColor: "#ffffff", color: "#000000", border: "none", fontSize: "100%", paddingTop: "2.5%", marginRight: "2%", width: "140px", height: "55px", borderRadius: "5px"}}><img src={require('../assets/img/align center.png')} style={{marginRight: "5px", marginLeft: "15%"}}/>Op-ed</div>
-                                <div onClick={this.InstagramClick} className={styles.iconBtn} id="click10" style={{backgroundColor: "#ffffff", color: "#000000", border: "none", fontSize: "100%", paddingTop: "2.5%", marginRight: "2%", width: "140px", height: "55px", borderRadius: "5px"}}><img src={require('../assets/img/instagram.png')} style={{marginRight: "5px", marginLeft: "15%"}}/>Instagram</div>
-                                <div onClick={this.TwitterClick} className={styles.iconBtn} id="click11" style={{backgroundColor: "#ffffff", color: "#000000", border: "none", fontSize: "100%", paddingTop: "2.5%", marginRight: "2%", width: "140px", height: "55px", borderRadius: "5px"}}><img src={require('../assets/img/twitter.png')} style={{marginRight: "5px", marginLeft: "15%"}}/>Twitter</div>
-                                <div onClick={this.TelegramClick} className={styles.iconBtn} id="click12" style={{backgroundColor: "#ffffff", color: "#000000", border: "none", fontSize: "100%", paddingTop: "2.5%", marginRight: "2%", width: "140px", height: "55px", borderRadius: "5px"}}><img src={require('../assets/img/tabler_brand-telegram.png')} style={{marginRight: "5px", marginLeft: "15%"}}/>Telegram</div>
+                                <div onClick={this.OPedClick} className={styles.iconBtn} id="click9" style={{backgroundColor: "#ffffff", color: "#000000", border: "none", fontSize: "100%", paddingTop: "2.5%", marginRight: "2%", width: "140px", height: "55px", borderRadius: "5px"}}><img src={oped} style={{marginRight: "5px", marginLeft: "15%"}}/>Op-ed</div>
+                                <div onClick={this.InstagramClick} className={styles.iconBtn} id="click10" style={{backgroundColor: "#ffffff", color: "#000000", border: "none", fontSize: "100%", paddingTop: "2.5%", marginRight: "2%", width: "140px", height: "55px", borderRadius: "5px"}}><img src={instagram} style={{marginRight: "5px", marginLeft: "15%"}}/>Instagram</div>
+                                <div onClick={this.TwitterClick} className={styles.iconBtn} id="click11" style={{backgroundColor: "#ffffff", color: "#000000", border: "none", fontSize: "100%", paddingTop: "2.5%", marginRight: "2%", width: "140px", height: "55px", borderRadius: "5px"}}><img src={twitter} style={{marginRight: "5px", marginLeft: "15%"}}/>Twitter</div>
+                                <div onClick={this.TelegramClick} className={styles.iconBtn} id="click12" style={{backgroundColor: "#ffffff", color: "#000000", border: "none", fontSize: "100%", paddingTop: "2.5%", marginRight: "2%", width: "140px", height: "55px", borderRadius: "5px"}}><img src={telegram} style={{marginRight: "5px", marginLeft: "15%"}}/>Telegram</div>
                                 
                               </div>
 
                               <br/>
 
                               <div style={{display: "flex"}}>
-                                <div onClick={this.WebsiteClick} className={styles.iconBtn} id="click13" style={{backgroundColor: "#ffffff", color: "#000000", border: "none", fontSize: "100%", paddingTop: "2.5%", marginRight: "2%", width: "140px", height: "55px", borderRadius: "5px"}}><img src={require('../assets/img/align center.png')} style={{marginRight: "5px", marginLeft: "15%"}}/>Website</div>
+                                <div onClick={this.WebsiteClick} className={styles.iconBtn} id="click13" style={{backgroundColor: "#ffffff", color: "#000000", border: "none", fontSize: "100%", paddingTop: "2.5%", marginRight: "2%", width: "140px", height: "55px", borderRadius: "5px"}}><img src={website} style={{marginRight: "5px", marginLeft: "15%"}}/>Website</div>
                     
                               </div>
 
