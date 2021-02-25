@@ -3,9 +3,9 @@ import { Link, Redirect } from 'react-router-dom';
 import axios from 'axios';
 import $ from 'jquery';
 import styles from '../../assets/css/style.module.css'
-import grid from '../assets/img/grid.png'
-import volume from '../assets/img/volume.png'
-import Vector from '../assets/img/Vector.png'
+import grid from '../../assets/img/grid.png'
+import volume from '../../assets/img/volume.png'
+import Vector from '../../assets/img/Vector.png'
 
 const Compaign = props => (
    <div className="col-md-3">

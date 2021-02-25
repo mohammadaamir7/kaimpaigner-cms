@@ -6,9 +6,9 @@ import $, { css } from 'jquery';
 import "react-datepicker/dist/react-datepicker.css";
 import { Button, Modal } from "react-bootstrap";
 import styles from '../../assets/css/style.module.css'
-import grid from '../assets/img/grid.png'
-import volume from '../assets/img/volume.png'
-import Vector from '../assets/img/Vector.png'
+import grid from '../../assets/img/grid.png'
+import volume from '../../assets/img/volume.png'
+import Vector from '../../assets/img/Vector.png'
 
 export default class HeaderPage extends Component{
     constructor(props){
