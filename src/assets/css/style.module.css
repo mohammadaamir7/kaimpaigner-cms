@@ -1,0 +1,836 @@
+.handleOverflow{
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.handleOverflow2{
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.backBlue{
+    background-color: #0a428a;
+    height: 525.5px;
+    
+}
+
+.backBlue2{
+    background-color: #0a428a;
+    height: 100%;
+    
+}
+
+.btnStyle{
+    width: 100px;
+    height: 30px;
+    font-size: 80%;
+    background-color: #1663c7;
+    color: #ffffff;
+    padding-left: 12.5%;
+    padding-top: 3.5%;
+}
+
+.btnStyle:hover{
+    color: #ffffff;
+}
+
+.divPos{
+    position: relative;
+    top: 130px;
+    left: 35%;
+}
+
+.divPos2{
+    position: relative;
+    top: 50%;
+    left: 20%;
+    
+}
+
+.divPos3{
+    position: relative;
+    top: 130px;
+    left: 15%;
+}
+
+.divPos4{
+    position: relative;
+    left: 15%;
+    height: auto;
+}
+
+.divPos5{
+    position: relative;
+    top: 40px;
+    left: 5%;
+    height: auto;
+}
+
+.imgSize{
+    height: 155px;
+    width: 92px;
+}
+
+.h1Style{
+    font-size: 120%;
+    font-weight: bold;
+}
+
+.h1Style2{
+    font-size: 180%;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.pStyle{
+    font-size: 80%;
+    color: grey;
+}
+
+.pStyle2{
+    font-size: 70%;
+    color:#ffffff;
+    margin-right: 40%;
+}
+
+::placeholder{
+    color: grey;
+}
+
+::-webkit-input-placeholder { /* Edge */
+    color: grey;
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer */
+    color: grey;
+  }
+
+  .linkStyle{
+      color: #000000;
+  }
+
+  .linkStyle:hover{
+    columns: #000000;;
+}
+
+
+/*************** Dashboard *******************/
+
+.backGrey{
+    background-color: #f0f1f2;
+    
+}
+
+.whiteDiv{
+    background-color: #ffffff;
+    height: auto;
+    width: 105%;
+    box-shadow: 3px 6px 10px #e3e3e3;
+}
+
+.whiteDiv:last-child{
+    background-color: #ffffff;
+    height: auto;
+    width: 102%;
+
+}
+
+.whiteDiv2{
+    background-color: #ffffff;
+    height: auto;
+    width: 105%;
+    
+}
+
+
+
+
+.rowGrey h5{
+    font-size: 100%;
+    font-weight: bold;
+    padding-top: 10%;
+    margin-left: 10%;
+}
+
+.rowGrey p{
+    font-weight: bold;
+    font-size: 150%;
+    color: #1663c7;
+    padding-bottom: 5%;
+    margin-left: 10%;
+}
+
+
+
+.whiteDiv2 h5{
+    font-size: 150%;
+    font-weight: bold;
+    padding-top: 10%;
+    text-align: center;
+}
+
+.whiteDiv2 p{
+    font-weight: bold;
+    font-size: 110%;
+    color: #666666;
+    padding-bottom: 5%;
+    text-align: center;
+    margin-right: 5%;
+}
+
+.divPosDash{
+    position: relative;
+    top: 2%;
+    left: 8%;
+}
+
+.h1Style3{
+    font-size: 110%;
+    font-weight: bold;
+    color: #ffffff;
+    margin-left: 8%;
+}
+
+.borderStyle{
+    border-bottom: 1px solid #ffffff;
+    width: 90%;
+    opacity: 0.1;
+    margin-top: 3%;
+    margin-right: 25%;
+}
+
+.navLink{
+    display: block;
+    height: auto;
+    
+    height: auto;
+    color: #ffffff;
+    width:90%;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    font-size: 90%;
+    transition: background 0.2s ease-in;
+}
+
+.navLink:hover{
+    background:#406a94;
+    color: #ffffff;
+}
+
+.iconStyle{
+    font-size: 130%;
+    margin-right: 10%;
+    margin-left: 10%;
+    vertical-align: middle;
+    color: #ffffff;
+}
+
+.iconStyle:hover{
+    color: #ffffff;
+}
+
+
+
+.backGrey2{
+    margin-left: 2%;
+}
+
+.backGrey2 h5{
+    font-size: 100%;
+    font-weight: bold;
+    padding: 3% 0;
+    margin-left: 5%;
+}
+
+/*.backGrey2 p{
+    font-weight: bold;
+    font-size: 150%;
+    color: #2874bf;
+    padding-bottom: 5%;
+    margin-left: 10%;
+}*/
+
+
+
+.floatP{
+    float: right;
+    color: #000000;
+    font-size: 80%;
+    margin-right: 2%;
+    margin-top: 3%;
+    font-weight: bold;
+}
+
+.floatP a{
+    margin-left: 0;
+}
+
+.borderStyle2{
+    border-bottom: 1px solid #d6d6d6;
+    width: 100%;
+}
+
+.weekDivFirst{
+    margin-left: 7%;
+    padding: 5% 0;
+    display: inline-block;
+}
+
+.weekDivFirst p{
+    font-weight: bold;
+    font-size: 80%;
+    color: grey;
+}
+
+.weekDivFirst button{
+    color: #214d8a;
+    font-weight: bold;
+    border-radius: 25px;
+    border: none;
+    width: 100%;
+    font-size: 100%;
+    text-align: center;
+}
+
+.weekDiv{
+    margin-left: 5%;
+    padding: 5% 0;
+    display: inline-block;
+    margin-left: 10%;
+}
+
+.weekDiv p{
+    font-weight: bold;
+    font-size: 80%;
+    color: grey;
+}
+
+.weekDiv button{
+    color: #214d8a;
+    font-weight: bold;
+    border-radius: 25px;
+    border:none;
+    width: 100%;
+    font-size: 100%;
+    text-align: center;
+   
+}
+
+.compaignDiv{
+    border: 1px solid #d6d6d6;
+    width: 90%;
+    align-items: center;
+}
+
+.compaignDiv h5{
+    font-size: 100%;
+    font-weight: bold;
+    padding: 3% 0;   
+}
+
+.compaignDiv p{
+    font-size: 80%;
+    padding: 3% 0;
+    margin-left: 5%;
+}
+
+.compaignDiv button{
+    font-size: 100%;
+    font-weight: bold;
+    padding: 3% 0;
+    margin-left: 2%;
+    border: 0;
+    background-color: #ffffff;
+    width: 20%;
+    
+}
+
+.compaignDiv p:last-child{
+    
+    color:#ababab !important;
+    font-weight: bold;
+}
+
+.borderStyle3{
+    border-bottom: 1px solid #d6d6d6;
+    width: 95%;
+    margin-left: 5%;
+}
+
+.iconStyle2{
+    font-size: 130%;
+    margin-right: 1%;
+    margin-left: 1%;
+    vertical-align: middle;
+    color: #ababab;
+    
+}
+
+
+
+
+/*************** Dashboard *******************/
+
+
+
+/*************** Campaigns *******************/
+.leftMarg{
+    margin-left: 1%;
+}
+
+.rowGrey2 h5{
+    font-size: 100%;
+    font-weight: bold;
+    padding-top: 5%;
+    margin-left: 10%;
+    color: #1663c7;
+}
+
+.rowGrey2 p{
+    font-size: 80%;
+    padding-bottom: 5%;
+    margin-left: 10%;
+    color: #4a4a4a;
+}
+
+.borderStyle4{
+    border-bottom: 1px solid #d6d6d6;
+    width: 90%;
+    margin-left: 10%;
+   
+}
+
+.h1Style5{
+    color: #4a4a4a;
+    font-weight: bold;
+    font-size: 160%;
+    margin-left: 3%;
+}
+
+.h1Style4{
+    color: #8c8c8c;
+    font-weight: bold;
+    font-size: 100%;
+    margin-left: 3%;
+    margin-top: 2%;
+}
+
+.whiteDiv3{
+    background-color: #ffffff;
+    height: 92%;
+    width: 105%;
+    margin-top: 5%;
+}
+
+.whiteDiv4{
+    background-color: #ffffff;
+    height: 92%;
+    width: 105%;
+    box-shadow: 6px 10px 10px #e3e3e3;
+}
+
+.navLink2{
+    display: block;
+    height: auto;
+    background-color: #0a428a;
+    color: #ffffff;
+    width:90%;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    font-size: 90%;
+    transition: background 0.2s ease-in;
+    border: 0;
+    text-align: left;
+}
+
+.navLink2:hover{
+    background:#406a94;
+    color: #ffffff;
+}
+
+.navLink2:active{
+    border: 0 !important;
+    border-radius: 0;
+}
+
+.divAnchor{
+    height: 100%;
+    width: 100%;
+}
+/*************** Campaigns *******************/
+
+
+
+/*************** Modal *******************/
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 35%;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    background-color: #ffffff;
+    
+  }
+/*************** Modal *******************/
+
+
+
+
+/*************** Camp Option *******************/
+
+.iconStyle3{
+    font-size: 80%;
+    display: block;
+    border: 1px solid #666666;
+    margin-left: 10px;
+    width: 120px;
+    height: auto;
+}
+
+/*************** Camp Option *******************/
+
+
+
+
+/*************** Overview *******************/
+
+.navLink3{
+    display: block;
+    height: auto;
+    color: #000000;
+    width:90%;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    padding-left: 3%;
+    font-size: 90%;
+    transition: background 0.2s ease-in;
+    margin-right: 5%;
+    margin-left: 5%;
+    font-weight: bold;
+}
+
+.navLink3:hover{
+    background:#6cabfc;
+    color: #000000;
+    border-radius: 5px;
+}
+
+.navLink4{
+    display: block;
+    height: auto;
+    color: #000000;
+    width:90%;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    padding-left: 3%;
+    font-size: 90%;
+    transition: background 0.2s ease-in;
+    margin-right: 5%;
+    margin-left: 5%;
+    font-weight: bold;
+}
+
+.navLink4:hover{
+    color: #000000;
+    
+}
+
+.campHead h5{
+    color: #4a4a4a;
+    font-size: 100%;
+    margin-right: 5%;
+    margin-left: 12%;
+}
+
+.campHead h3{
+    color: #4a4a4a;
+    font-size: 120%;
+    font-weight: bold;
+    margin-right: 15%;
+    margin-left: 12%;
+}
+
+.campHead h1{
+    color: #4a4a4a;
+    font-size: 160%;
+    font-weight: bold;
+    
+}
+
+.campHead p{
+    color: #4a4a4a;
+    font-size: 80%;
+    margin-right: 12%;
+    
+}
+
+/*************** Overview *******************/
+
+
+
+
+/*************** Contact *******************/
+.dirStyle h5{
+    font-size: 80%;
+    color: #323c47;
+    text-align: center;
+}
+
+.dirStyle p{
+    font-size: 70%;
+    color: #a1a1a1;
+    text-align: center;
+}
+
+.thStyle{
+    color: #323c47;
+    text-align: center;
+    font-size: 100%;
+}
+
+.hoverClass:hover{
+    background-color: #e1eeff ;
+}
+
+/*************** Contact *******************/
+
+
+
+/*************** Add Message *******************/
+
+.iconBtn div{
+    background-color: "#ffffff" !important; 
+    color: "#000000" !important; 
+    border: "none" !important;   
+    font-size: "100%" !important; 
+    padding-top: "1%" !important; 
+    margin-right: "2%" !important; 
+    width: "140px" !important; 
+    height: "55px" !important;
+}
+
+
+
+/*************** Add Message *******************/
+
+
+/*************** Message View *******************/
+
+
+
+.campHead2 h5{
+    color: #4a4a4a;
+    font-size: 100%;
+    margin-left: 12%;
+}
+
+.campHead2 h3{
+    color: #4a4a4a;
+    font-size: 120%;
+    font-weight: bold;
+    margin-right: 15%;
+    margin-left: 12%;
+}
+
+.campHead2 h1{
+    color: #4a4a4a;
+    font-size: 160%;
+    font-weight: bold;
+    margin-right: 10%;
+}
+
+.campHead2 p{
+    color: #4a4a4a;
+    font-size: 80%;
+    margin-right: 12%;
+    
+}
+
+.msgViewHd{
+    
+    font-weight: bold;
+    margin-left: 0 !important;
+}
+
+.whiteDiv5{
+    background-color: #ffffff;
+    height: auto;
+    width: 90%;
+    margin-top: 5%;
+}
+
+.msgName{
+    height: 50%;
+    width: 30%;
+    background-color: #e1eeff;
+    border: 1px solid #1663c7;
+    border-radius: 3px;
+}
+
+.msgNamePara{
+    color: #1663c7 !important;
+    font-size: 75%;
+    text-align: center;
+    margin-left: 13%;
+    padding-top: 12%;
+    font-weight: bold;
+}
+
+.msgPara{
+    margin-left: 5%;
+    margin-right: 0;
+    color: #4a4a4a;
+    font-weight: bold;   
+}
+
+.contentPara{
+    font-weight: bold;
+    font-size: 60% !important;
+    margin-right: 2% !important;
+    color: #59c125 !important;
+    padding-top: 50px !important;
+    display: inline;
+}
+
+.contentPara:first-child{
+    font-weight: bold;
+    font-size: 60% !important;
+    margin-right: 2% !important;
+    color: #59c125 !important;
+    margin-left: -12px !important;
+    display: inline;
+}
+
+
+
+.UDstyle{
+    background-color: #ffffff;
+    border: none !important;
+    outline: 1px solid #ffffff !important;
+    margin-left: 410px !important;
+}
+
+.UDstyle:last-child{
+    background-color: #ffffff;
+    border: none !important;
+    outline: 1px solid #ffffff !important;
+    margin-left: 0% !important;
+}
+
+.UDstyle3{
+    background-color: #ffffff;
+    border: none !important;
+    outline: 1px solid #ffffff !important;
+}
+
+
+.UDstyle3:last-child{
+    background-color: #ffffff;
+    border: none !important;
+    outline: 1px solid #ffffff !important;
+    margin-left: 0% !important;
+}
+
+.UDstyle4{
+    background-color: #ffffff;
+    border: none !important;
+    outline: 1px solid #ffffff !important;
+}
+
+
+.UDstyle4:last-child{
+    background-color: #ffffff;
+    border: none !important;
+    outline: 1px solid #ffffff !important;
+    margin-left: 0% !important;
+}
+
+.UDstyle2{
+    background-color: #d42a1e !important;
+    border: none !important;
+    height: 40px;
+    padding-top: 2% !important;
+}
+
+.UDstyle:last-child{
+    margin-left: 6px;
+}
+
+.btnStyle2{
+    width: 25%;
+    height: 35px;
+    font-size: 75% !important;
+    background-color: #214d8a !important;
+    color: #ffffff;
+    padding-left: 12.5%;
+    padding-top: 1.5% !important;
+    border-radius: 0 !important;
+    margin-left: auto;
+    margin-right: 5%;
+}
+
+
+.btnStyle3{
+    width: 15%;
+    height: 35px;
+    font-size: 75% !important;
+    background-color: #214d8a !important;
+    color: #ffffff;
+    padding-left: 12.5%;
+    padding-top: 1% !important;
+    border-radius: 0 !important;
+    margin-left: auto;
+    margin-right: 1.5%;
+}
+
+.btnStyle4{
+    width: 50%;
+    height: 30px;
+    font-size: 75% !important;
+    background-color: #214d8a !important;
+    color: #ffffff;
+    padding-left: 12.5%;
+    padding-top: 3% !important;
+    border-radius: 0 !important;
+    margin-left: auto;
+    margin-right: 1.5%;
+}
+/*************** Message View *******************/
+
+.LogoutBtn{
+    color: #ffffff;
+    background-color: #d4d41e;
+    border: none !important;
+    font-size: 80%;
+    height: 20px;
+    width: 80px;
+    margin-right: 10%;
+    margin-top: 8%;
+    font-weight: bold;
+}
+
+.userName{
+    font-size: 80%;
+    margin-right: 5%;
+    padding-top: 5%;
+}
+
+.navbutton{
+    height: auto;
+    color: #000000;
+    font-weight: bold;
+    width:55%;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    font-size: 90%;
+    border: none !important;
+    transition: background 0.2s ease-in;  
+}
+
+.navbutton:hover{
+    background:#6cabfc;
+    color: #000000;
+    border-radius: 5px;
+}
