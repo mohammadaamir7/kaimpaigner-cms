@@ -254,7 +254,7 @@ export default class addMailbox extends Component{
               <div className={styles.divPosDash}>
                 
                             
-                  <img src={vector} style={{marginLeft:20}}/>
+                  <img src={Vector} style={{marginLeft:20}}/>
                   <div className={styles.borderStyle} style={{marginRight:20}}></div>
                   <br/>
                   <Link to="/dashboard" className={styles.navLink2}><img src={grid} style={{marginRight:10, paddingLeft:10}} />Dashboard</Link>
