@@ -6,6 +6,9 @@ import $, { css } from 'jquery';
 import "react-datepicker/dist/react-datepicker.css";
 import { Button, Modal } from "react-bootstrap";
 import styles from '../../assets/css/style.module.css'
+import grid from '../assets/img/grid.png'
+import volume from '../assets/img/volume.png'
+import Vector from '../assets/img/Vector.png'
 
 export default class HeaderPage extends Component{
     constructor(props){
@@ -3384,11 +3387,11 @@ export default class HeaderPage extends Component{
                         <div className={styles.divPosDash}>
                             {/*<h1 className={styles.h1Style3}>Kaimpaigner</h1>*/}
                             
-                            <img src={require('./Vector.png')} style={{marginLeft:20}}/>
+                            <img src={Vector} style={{marginLeft:20}}/>
                             <div className={styles.borderStyle} style={{marginRight:20}}></div>
                             <br/>
-                            <Link to="/dashboard" className={styles.navLink2}><img src={require('./grid.png')} style={{marginRight:10, paddingLeft:10}} />Dashboard</Link>
-                            <Link to={"/listCompaign/" + localStorage.getItem("username")} className={styles.navLink2}><img src={require('./volume.png')} style={{marginRight:10, paddingLeft:10}} />Campaign</Link>
+                            <Link to="/dashboard" className={styles.navLink2}><img src={grid} style={{marginRight:10, paddingLeft:10}} />Dashboard</Link>
+                            <Link to={"/listCompaign/" + localStorage.getItem("username")} className={styles.navLink2}><img src={volume} style={{marginRight:10, paddingLeft:10}} />Campaign</Link>
                         </div>
                     </div>
 
