@@ -13,7 +13,7 @@ import volume from '../assets/img/volume.png'
 import Vector from '../assets/img/Vector.png'
 import testimage from '../assets/img/test_image.jpg'
 import clock from '../assets/img/Time Square.png'
-import calender from '../assets/img/Calender.png'
+import calender from '../assets/img/Calendar.png'
 
 export default class CampaignOverview extends Component{
   constructor(props){
