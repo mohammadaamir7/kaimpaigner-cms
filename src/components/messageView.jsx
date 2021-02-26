@@ -11,6 +11,8 @@ import arrow from '../assets/img/mdi_arrow_back_ios.png'
 import grid from '../assets/img/grid.png'
 import volume from '../assets/img/volume.png'
 import Vector from '../assets/img/Vector.png'
+import del from '../assets/img/delete.png'
+import edit from '../assets/img/edit.png'
 
 const Message = props => (
     <div className={[styles['whiteDiv5'] , 'row'].join(' ')}>
@@ -19,8 +21,8 @@ const Message = props => (
             <div style={{display: "flex"}}>
                 <h5 className={styles.msgViewHd}>Message Title</h5>
                 <div style={{marginLeft: "auto"}}>
-                    <Link to={"/updateMessage/" + props.message.campaign_id + '/' + props.message._id} className={styles.UDstyle}><img src={require('../assets/img/edit.png')}/></Link>
-                    <button onClick={() => { props.deleteMessage(props.message._id) }} className={styles.UDstyle}><img src={require('../assets/img/delete.png')}/></button>
+                    <Link to={"/updateMessage/" + props.message.campaign_id + '/' + props.message._id} className={styles.UDstyle}><img src={edit}/></Link>
+                    <button onClick={() => { props.deleteMessage(props.message._id) }} className={styles.UDstyle}><img src={del}/></button>
                                   
                 </div>
             </div>

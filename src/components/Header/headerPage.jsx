@@ -9,6 +9,7 @@ import styles from '../../assets/css/style.module.css'
 import grid from '../../assets/img/grid.png'
 import volume from '../../assets/img/volume.png'
 import Vector from '../../assets/img/Vector.png'
+import time from '../../assets/img/Time Square.png'
 
 export default class HeaderPage extends Component{
     constructor(props){
@@ -851,7 +852,7 @@ export default class HeaderPage extends Component{
 
                             <div className={styles.borderStyle3}></div>
 
-                            <p style={{fontWeight:"bold"}}><img src={require('../../assets/img/Time Square.png')} /> {new Date(child.Start_Date).getHours()} : {new Date(child.Start_Date).getMinutes()}</p>
+                            <p style={{fontWeight:"bold"}}><img src={time} /> {new Date(child.Start_Date).getHours()} : {new Date(child.Start_Date).getMinutes()}</p>
 
                             <div style={{marginLeft: "auto"}}>
                                 
@@ -1082,7 +1083,7 @@ export default class HeaderPage extends Component{
 
                             <div className={styles.borderStyle3}></div>
 
-                            <p style={{fontWeight:"bold"}}><img src={require('../../assets/img/Time Square.png')} /> {new Date(child.Start_Date).getHours()} : {new Date(child.Start_Date).getMinutes()}</p>
+                            <p style={{fontWeight:"bold"}}><img src={time} /> {new Date(child.Start_Date).getHours()} : {new Date(child.Start_Date).getMinutes()}</p>
 
                             <div style={{marginLeft: "auto"}}>
                                 
@@ -1386,7 +1387,7 @@ export default class HeaderPage extends Component{
 
                             <div className={styles.borderStyle3}></div>
 
-                            <p style={{fontWeight:"bold"}}><img src={require('../../assets/img/Time Square.png')} /> {new Date(child.Start_Date).getHours()} : {new Date(child.Start_Date).getMinutes()}</p>
+                            <p style={{fontWeight:"bold"}}><img src={time} /> {new Date(child.Start_Date).getHours()} : {new Date(child.Start_Date).getMinutes()}</p>
 
                             <div style={{marginLeft: "auto"}}>
                                 
@@ -1770,7 +1771,7 @@ export default class HeaderPage extends Component{
 
                             <div className={styles.borderStyle3}></div>
 
-                            <p style={{fontWeight:"bold"}}><img src={require('../../assets/img/Time Square.png')} /> {new Date(child.Start_Date).getHours()} : {new Date(child.Start_Date).getMinutes()}</p>
+                            <p style={{fontWeight:"bold"}}><img src={time} /> {new Date(child.Start_Date).getHours()} : {new Date(child.Start_Date).getMinutes()}</p>
 
                             <div style={{marginLeft: "auto"}}>
                                 
@@ -2227,7 +2228,7 @@ export default class HeaderPage extends Component{
 
                             <div className={styles.borderStyle3}></div>
 
-                            <p style={{fontWeight:"bold"}}><img src={require('../../assets/img/Time Square.png')} /> {new Date(child.Start_Date).getHours()} : {new Date(child.Start_Date).getMinutes()}</p>
+                            <p style={{fontWeight:"bold"}}><img src={time} /> {new Date(child.Start_Date).getHours()} : {new Date(child.Start_Date).getMinutes()}</p>
 
                             <div style={{marginLeft: "auto"}}>
                                 
@@ -2747,7 +2748,7 @@ export default class HeaderPage extends Component{
 
                             <div className={styles.borderStyle3}></div>
 
-                            <p style={{fontWeight:"bold"}}><img src={require('../../assets/img/Time Square.png')} /> {new Date(child.Start_Date).getHours()} : {new Date(child.Start_Date).getMinutes()}</p>
+                            <p style={{fontWeight:"bold"}}><img src={time} /> {new Date(child.Start_Date).getHours()} : {new Date(child.Start_Date).getMinutes()}</p>
 
                             <div style={{marginLeft: "auto"}}>
                                 
@@ -3352,7 +3353,7 @@ export default class HeaderPage extends Component{
 
                             <div className={styles.borderStyle3}></div>
 
-                            <p style={{fontWeight:"bold"}}><img src={require('../../assets/img/Time Square.png')} /> {new Date(child.Start_Date).getHours()} : {new Date(child.Start_Date).getMinutes()}</p>
+                            <p style={{fontWeight:"bold"}}><img src={time} /> {new Date(child.Start_Date).getHours()} : {new Date(child.Start_Date).getMinutes()}</p>
 
                             <div style={{marginLeft: "auto"}}>
                                 
