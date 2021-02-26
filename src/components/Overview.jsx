@@ -12,6 +12,8 @@ import grid from '../assets/img/grid.png'
 import volume from '../assets/img/volume.png'
 import Vector from '../assets/img/Vector.png'
 import testimage from '../assets/img/test_image.jpg'
+import clock from '../assets/img/Time Square.png'
+import clock from '../assets/img/Calender.png'
 
 export default class CampaignOverview extends Component{
   constructor(props){
@@ -149,12 +151,12 @@ window.location = '/listCompaign/' + localStorage.getItem('username')
                       
                       <div className="col-md-4">
                           <div style={{display: "flex"}}>
-                              <img src={require('../assets/img/Calendar.png')}/>
+                              <img src={calender}/>
                               <p style={{marginLeft: 10, paddingTop: 10}}>{new Date(this.state.campaign.creationDate).getFullYear()}-{new Date(this.state.campaign.creationDate).getMonth() + 1}-{new Date(this.state.campaign.creationDate).getDate()}</p>
                           </div>
                           <br/>
                           <div style={{display: "flex"}}>
-                              <img src={require('../assets/img/Time Square.png')}/>
+                              <img src={clock}/>
                               <p style={{marginLeft: 10, paddingTop: 10}}>{new Date(this.state.campaign.creationDate).getHours()} : {new Date(this.state.campaign.creationDate).getMinutes()}</p>
                           </div>
                       </div>

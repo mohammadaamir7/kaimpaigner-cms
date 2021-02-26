@@ -6,6 +6,7 @@ import styles from '../../assets/css/style.module.css'
 import grid from '../../assets/img/grid.png'
 import volume from '../../assets/img/volume.png'
 import Vector from '../../assets/img/Vector.png'
+import clock from '../../assets/img/Time Square.png'
 
 const Compaign = props => (
    <div className="col-md-3">
@@ -29,7 +30,7 @@ const Compaign = props => (
            <div className="row" style={{height: '30%'}}>
               <div className='col-md-12'>
                   <div className={styles.borderStyle4}></div>
-                  <p style={{fontWeight:"bold", marginTop:10}}><img src={require('../../assets/img/Time Square.png')} /> {new Date(props.compaign.creationDate).getHours()} : {new Date(props.compaign.creationDate).getMinutes()}</p>
+                  <p style={{fontWeight:"bold", marginTop:10}}><img src={clock} /> {new Date(props.compaign.creationDate).getHours()} : {new Date(props.compaign.creationDate).getMinutes()}</p>
               </div>
            </div>
 
@@ -62,7 +63,7 @@ const Compaign = props => (
               <div className="row" style={{height: '30%'}}>
               <div className={styles.borderStyle4}></div>
                 <div className='col-md-12'>
-                  <p style={{fontWeight:"bold", marginTop:10}}><img src={require('../../assets/img/Time Square.png')} /> {new Date(props.compaign.creationDate).getHours()} : {new Date(props.compaign.creationDate).getMinutes()}</p>
+                  <p style={{fontWeight:"bold", marginTop:10}}><img src={clock} /> {new Date(props.compaign.creationDate).getHours()} : {new Date(props.compaign.creationDate).getMinutes()}</p>
                 </div>
               </div>
               
