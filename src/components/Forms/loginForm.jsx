@@ -91,18 +91,16 @@ onSubmit(e){
             loggedIn: true
           })
 
-          if(localStorage.getItem('authorization') === undefined){
-             localStorage.removeItem('authorization')
-             this.setState({
-               loggedIn: false
-             })
-          }
 
           window.location = '/dashboard'
           
         })
         .catch(err => {
           alert("Invalid email or password.")
+          localStorage.removeItem('authorization')
+          this.setState({
+            loggedIn: false
+          })
           console.log("err")
         })
         
