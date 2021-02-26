@@ -83,17 +83,22 @@ onSubmit(e){
 
         if(check === false){
             if(this.state.confirmPassword === this.state.password && this.state.password !== '' && this.state.name !== '' && this.state.email !== ''){
-              const user = {
-                name: this.state.name,
-                email: this.state.email,
-                password: this.state.password
-            }
-
-            axios.post('https://kaimpaigner-cms-backend.herokuapp.com/api/registration', user)
-                .then(res => console.log(res.data))
-                .catch(err => console.log("err"))
-                window.location = '/loginForm'
-            
+              if(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(this.state.email)){
+                const user = {
+                  name: this.state.name,
+                  email: this.state.email,
+                  password: this.state.password
+              }
+  
+              axios.post('https://kaimpaigner-cms-backend.herokuapp.com/api/registration', user)
+                  .then(res => console.log(res.data))
+                  .catch(err => console.log("err"))
+                  window.location = '/loginForm'
+              
+              }else{
+                alert("Invalid email format...")
+              }
+              
             }else{
               
               alert("Password and Confirm Password Missmatch...")
