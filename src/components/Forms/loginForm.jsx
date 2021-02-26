@@ -91,6 +91,13 @@ onSubmit(e){
             loggedIn: true
           })
 
+          if(localStorage.getItem('authorization') === undefined){
+             localStorage.removeItem('authorization')
+             this.setState({
+               loggedIn: false
+             })
+          }
+
           window.location = '/dashboard'
           
         })
