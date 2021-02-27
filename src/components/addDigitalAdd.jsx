@@ -342,23 +342,7 @@ export default class addDigitalAdd extends Component{
                                     </select>
                                 </div>
 
-                                <div className="form-group"> 
-                                    <label style={{fontSize:12}}>Assigned To</label>
-                                    <select ref="userInput"
-                                        required
-                                        className="form-control"
-                                        value={this.state.userNAME}
-                                        onChange={this.onChangeUsername}>
-                                        {
-                                            this.state.users.map(function(user) {
-                                            return <option 
-                                                key={user}
-                                                value={user}>{user}
-                                                </option>;
-                                            })
-                                        }
-                                    </select>
-                                </div>
+                                
 
                                 <div className="form-group">
                                     <label style={{fontSize:12}}>Enter Text </label>
@@ -390,17 +374,21 @@ export default class addDigitalAdd extends Component{
                                 </div>
 
                                 <div className="form-group"> 
-                                    <label style={{fontSize:12}}>Asssigned To </label>
-                                    <select className="form-control" value={this.state.assingedTo} onChange={this.onChangeAssignedTo} style={{width: "300px", fontSize:12}}>
-                                        <option value="">Select</option>
-                                        <option value="Aamir">Aamir</option>
-                                        <option value="Ali">Ali</option>
-                                        <option value="Farhan">Farhan</option>
-                                        <option value="KK@desider.net">KK@desider.net</option>
-                                        <option value="Maida">Maida</option>
-                                        <option value="MaidaK">MaidaK</option>
-                                        <option value="Martin Lengyel">Martin Lengyel</option>
-                                        <option value="Umair">Umair</option>
+                                    <label style={{fontSize:12}}>Assigned To</label>
+                                    <select ref="userInput"
+                                        style={{width: "300px", fontSize:12}}
+                                        required
+                                        className="form-control"
+                                        value={this.state.userNAME}
+                                        onChange={this.onChangeUsername}>
+                                        {
+                                            this.state.users.map(function(user) {
+                                            return <option 
+                                                key={user}
+                                                value={user}>{user}
+                                                </option>;
+                                            })
+                                        }
                                     </select>
                                 </div>
 
