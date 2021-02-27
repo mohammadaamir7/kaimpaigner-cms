@@ -38,12 +38,27 @@ export default class addDigitalAdd extends Component{
             assignedTo: '',
             campaign: '',
             checked: false,
-            events: []
+            events: [],
+            users: [],
+            userNAME: ''
         }
 
     }
     
     componentDidMount(){
+
+        axios.get('https://kaimpaigner-cms-backend.herokuapp.com/api/listUsers')
+        .then((res) => {
+            this.setState({ 
+                users: res.data.map(user => user.name),
+                userNAME: res.data[0].name 
+            })
+            
+        })
+        .catch((error) => {
+            console.log(error);
+        })
+
         axios.get('https://kaimpaigner-cms-backend.herokuapp.com/api/' + this.props.match.params.id)
         .then((res) => {
             this.setState({ campaign: res.data })
@@ -80,6 +95,12 @@ export default class addDigitalAdd extends Component{
     onChangeAssignedTo(e) {
         this.setState({
             assignedTo: e.target.value
+        })
+    }
+
+    onChangeUsername(e) {
+        this.setState({
+          userNAME: e.target.value
         })
     }
 
@@ -318,6 +339,24 @@ export default class addDigitalAdd extends Component{
                                         <option value="Google Banner">Google Banner</option>
                                         <option value="Other social-media">Other social-media</option>
                                         
+                                    </select>
+                                </div>
+
+                                <div className="form-group"> 
+                                    <label style={{fontSize:12}}>Assigned To</label>
+                                    <select ref="userInput"
+                                        required
+                                        className="form-control"
+                                        value={this.state.userNAME}
+                                        onChange={this.onChangeUsername}>
+                                        {
+                                            this.state.users.map(function(user) {
+                                            return <option 
+                                                key={user}
+                                                value={user}>{user}
+                                                </option>;
+                                            })
+                                        }
                                     </select>
                                 </div>
 

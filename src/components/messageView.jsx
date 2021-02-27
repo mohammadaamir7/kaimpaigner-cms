@@ -22,7 +22,7 @@ const Message = props => (
                 <h5 className={styles.msgViewHd}>Message Title</h5>
                 <div style={{marginLeft: "auto"}}>
                     <Link to={"/updateMessage/" + props.message.campaign_id + '/' + props.message._id} className={styles.UDstyle}><img src={edit}/></Link>
-                    <button onClick={() => { props.deleteMessage(props.message._id) }} className={styles.UDstyle}><img src={del}/></button>
+                    <button onClick={() => { props.deleteMessage(props.message._id) }} className={styles.UDstyle}><img src={del} style={{marginLeft: '0'}}/></button>
                                   
                 </div>
             </div>
