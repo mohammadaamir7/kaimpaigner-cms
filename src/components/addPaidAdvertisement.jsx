@@ -20,6 +20,7 @@ export default class addPaidAdvertisement extends Component{
         this.onChangeStartDate = this.onChangeStartDate.bind(this);
         this.onChangeEndDate = this.onChangeEndDate.bind(this);
         this.onChangeAssignedTo = this.onChangeAssignedTo.bind(this);
+        this.onChangeUsername = this.onChangeUsername.bind(this);
         this.handleChange = this.handleChange.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
 
@@ -40,11 +41,25 @@ export default class addPaidAdvertisement extends Component{
             assignedTo: '',
             campaign: '',
             checked: false,
-            events: []
+            events: [],
+            users: [],
+            userNAME: ''
         }
 
     }
     componentDidMount(){
+        axios.get('https://kaimpaigner-cms-backend.herokuapp.com/api/listUsers')
+        .then((res) => {
+            this.setState({ 
+                users: res.data.map(user => user.name),
+                userNAME: res.data[0].name 
+            })
+            
+        })
+        .catch((error) => {
+            console.log(error);
+        })
+
         axios.get('https://kaimpaigner-cms-backend.herokuapp.com/api/' + this.props.match.params.id)
         .then((res) => {
             this.setState({ campaign: res.data })
@@ -88,6 +103,12 @@ export default class addPaidAdvertisement extends Component{
     onChangeAssignedTo(e) {
         this.setState({
             assignedTo: e.target.value
+        })
+    }
+
+    onChangeUsername(e) {
+        this.setState({
+          userNAME: e.target.value
         })
     }
 
@@ -356,18 +377,22 @@ export default class addPaidAdvertisement extends Component{
                                     </div>
                                 </div>
 
-                                <div className="form-group"> 
-                                    <label style={{fontSize:12}}>Assigned To </label>
-                                    <select className="form-control" value={this.state.assingedTo} onChange={this.onChangeAssignedTo} style={{width: "300px", fontSize:12}}>
-                                        <option value="">Select</option>
-                                        <option value="Aamir">Aamir</option>
-                                        <option value="Ali">Ali</option>
-                                        <option value="Farhan">Farhan</option>
-                                        <option value="KK@desider.net">KK@desider.net</option>
-                                        <option value="Maida">Maida</option>
-                                        <option value="MaidaK">MaidaK</option>
-                                        <option value="Martin Lengyel">Martin Lengyel</option>
-                                        <option value="Umair">Umair</option>
+                                 <div className="form-group"> 
+                                    <label style={{fontSize:12}}>Assigned To</label>
+                                    <select ref="userInput"
+                                        style={{width: "300px", fontSize:12}}
+                                        required
+                                        className="form-control"
+                                        value={this.state.userNAME}
+                                        onChange={this.onChangeUsername}>
+                                        {
+                                            this.state.users.map(function(user) {
+                                            return <option 
+                                                key={user}
+                                                value={user}>{user}
+                                                </option>;
+                                            })
+                                        }
                                     </select>
                                 </div>
 

@@ -20,6 +20,7 @@ export default class addDigitalAdd extends Component{
         this.onChangeStartDate = this.onChangeStartDate.bind(this);
         this.onChangeEndDate = this.onChangeEndDate.bind(this);
         this.onChangeAssignedTo = this.onChangeAssignedTo.bind(this);
+        this.onChangeUsername = this.onChangeUsername.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
 
         const token = localStorage.getItem('authorization')
@@ -194,7 +195,7 @@ export default class addDigitalAdd extends Component{
                                 text: this.state.text,
                                 startDate: this.state.startDate,
                                 endDate: this.state.endDate,
-                                assignedTo: this.state.assignedTo,
+                                assignedTo: this.state.userNAME,
                                 checked: true,
                                 createdBy: localStorage.getItem("username")
                             }
