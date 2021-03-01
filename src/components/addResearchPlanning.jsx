@@ -203,7 +203,7 @@ export default class addResearchPlanning extends Component{
                             text: this.state.text,
                             startDate: this.state.startDate,
                             endDate: this.state.endDate,
-                            assignedTo: this.state.assignedTo,
+                            assignedTo: this.state.userNAME,
                             checked: true,
                             createdBy: localStorage.getItem("username")
                         }
@@ -227,7 +227,7 @@ export default class addResearchPlanning extends Component{
                                 text: this.state.text,
                                 startDate: this.state.startDate,
                                 endDate: this.state.endDate,
-                                assignedTo: this.state.assignedTo,
+                                assignedTo: this.state.userNAME,
                                 checked: false,
                                 createdBy: localStorage.getItem("username")
                             }

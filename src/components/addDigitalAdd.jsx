@@ -219,7 +219,7 @@ export default class addDigitalAdd extends Component{
                                     text: this.state.text,
                                     startDate: this.state.startDate,
                                     endDate: this.state.endDate,
-                                    assignedTo: this.state.assignedTo,
+                                    assignedTo: this.state.userNAME,
                                     checked: false,
                                     createdBy: localStorage.getItem("username")
                                 }
