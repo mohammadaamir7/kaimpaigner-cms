@@ -25,6 +25,7 @@ import instagram from '../assets/img/instagram.png'
 import twitter from '../assets/img/twitter.png'
 import telegram from '../assets/img/tabler_brand-telegram.png'
 import website from '../assets/img/gg_website.png'
+import DatePicker from 'react-datepicker';
 
 export default class AddMessage extends Component{
   constructor(props){
