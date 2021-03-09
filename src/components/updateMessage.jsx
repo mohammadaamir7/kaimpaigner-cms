@@ -41,6 +41,8 @@ export default class UpdateMessage extends Component{
     this.onChangeTitle = this.onChangeTitle.bind(this);
     this.onChangeContentType = this.onChangeContentType.bind(this);
     this.onChangeText = this.onChangeText.bind(this);
+    this.onChangeStartDate = this.onChangeStartDate.bind(this);
+    this.onChangeEndDate = this.onChangeEndDate.bind(this);
     this.FBClick = this.FBClick.bind(this);
     this.ViberClick = this.ViberClick.bind(this);
     this.NewsletterClick = this.NewsletterClick.bind(this);
@@ -63,7 +65,9 @@ export default class UpdateMessage extends Component{
         text: '',
         campaign: '',
         message: '',
-        contentArray: []
+        contentArray: [],
+        startDate: new Date(),
+        endDate: new Date(),
     }
   }
 
@@ -86,6 +90,8 @@ export default class UpdateMessage extends Component{
         this.setState({title: this.state.message.Title})
         this.setState({text: this.state.message.Text})
         this.setState({contentType: this.state.message.content_type})
+        this.setState({startDate: new Date(this.state.message.Start_Date)})
+        this.setState({endDate: new Date(this.state.message.End_Date)})
         this.state.contentArray = this.state.message.contentArray
         
         this.state.message.contentArray.forEach(child => {
@@ -158,6 +164,19 @@ export default class UpdateMessage extends Component{
 
 findElement(entry, channel){
   return entry === channel
+}
+
+
+onChangeStartDate(date) {
+  this.setState({
+      startDate: date
+  })
+}
+
+onChangeEndDate(date) {
+  this.setState({
+      endDate: date
+  })
 }
 
 
@@ -482,7 +501,9 @@ onSubmit(e){
         text: this.state.text,
         attachement: '',
         createdBy: localStorage.getItem("username"),
-        contentArray: this.state.contentArray
+        contentArray: this.state.contentArray,
+        startDate: this.state.startDate,
+        endDate: this.state.endDate
     }
 
 
@@ -645,11 +666,43 @@ onSubmit(e){
                                     <textarea type="text" className="form-control" value={this.state.text} onChange={this.onChangeText} placeholder="Enter Text" style={{width: "95%", fontSize:12}}/>
                             </div>
 
-                            <div class="form-group">
+                            <br/>
+
+                            <div style={{display: "flex"}}>
+                              <div className="form-group">
+                                  <label style={{fontSize:12}}>Start Date: </label>
+                                  <div>
+                                      <DatePicker
+                                      className="form-control"
+                                      selected={this.state.startDate}
+                                      onChange={this.onChangeStartDate}
+                                      style={{width: "300px", fontSize:12}}
+                                      />
+                                  </div>
+                              </div>
+
+                              <div className="form-group">
+                                  <label style={{fontSize:12}}>End Date: </label>
+                                  <div>
+                                      <DatePicker
+                                      className="form-control"
+                                      selected={this.state.endDate}
+                                      onChange={this.onChangeEndDate}
+                                      style={{width: "300px", fontSize:12}}
+                                      />
+                                  </div>
+                              </div>
+
+                              
+
+
+                            </div>
+
+                            {/* <div class="form-group">
                               <label for="exampleFormControlFile1" style={{color: "#000000", fontWeight: "bold"}}>Attachement</label>
                               
                               <input type="file" class="form-control-file" text="Browse" id="exampleFormControlFile1"/>
-                            </div>
+                            </div> */}
 
 
                             <br/>
