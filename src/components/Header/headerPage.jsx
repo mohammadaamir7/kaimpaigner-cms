@@ -51,7 +51,7 @@ export default class HeaderPage extends Component{
             pro_End_Date: new Date(),
             pro_Start_Date: new Date(),
             p_title: '',
-            
+            //data1: []
         }
     }
     
