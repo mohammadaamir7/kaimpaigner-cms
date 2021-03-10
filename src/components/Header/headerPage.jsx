@@ -10,9 +10,9 @@ import grid from '../../assets/img/grid.png'
 import volume from '../../assets/img/volume.png'
 import Vector from '../../assets/img/Vector.png'
 import time from '../../assets/img/Time Square.png'
-// import * as am4core from "@amcharts/amcharts4/core";
-// import * as am4charts from "@amcharts/amcharts4/charts";
-// import am4themes_animated from "@amcharts/amcharts4/themes/animated";
+import * as am4core from "@amcharts/amcharts4/core";
+import * as am4charts from "@amcharts/amcharts4/charts";
+import am4themes_animated from "@amcharts/amcharts4/themes/animated";
 
 export default class HeaderPage extends Component{
     constructor(props){
