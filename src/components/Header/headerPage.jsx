@@ -51,7 +51,7 @@ export default class HeaderPage extends Component{
             pro_End_Date: new Date(),
             pro_Start_Date: new Date(),
             p_title: '',
-            data1: []
+            
         }
     }
     
@@ -223,78 +223,61 @@ export default class HeaderPage extends Component{
             })
 
 
-            var data = []
-            var chart = am4core.create("chartdiv", am4charts.XYChart);
+        //     var data = []
+        //     var chart = am4core.create("chartdiv", am4charts.XYChart);
       
-            axios.get('https://kaimpaigner-cms-backend.herokuapp.com/api/ganttChart/' + localStorage.getItem('username'))
-            .then((res) => {
-                this.setState({ data1: res.data })
-                data = this.state.data1
+        //     axios.get('https://kaimpaigner-cms-backend.herokuapp.com/api/ganttChart/' + localStorage.getItem('username'))
+        //     .then((res) => {
+        //         this.setState({ data1: res.data })
+        //         data = this.state.data1
                 
-                chart.data = res.data
+        //         chart.data = res.data
                 
-            })
-            .catch((error) => {
-                console.log(error);
-          })
+        //     })
+        //     .catch((error) => {
+        //         console.log(error);
+        //   })
       
-          am4core.useTheme(am4themes_animated);
+        //   am4core.useTheme(am4themes_animated);
           
-              chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
+        //       chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
       
-              chart.paddingRight = 30;
-              chart.dateFormatter.inputDateFormat = "yyyy-MM-dd HH:mm";
+        //       chart.paddingRight = 30;
+        //       chart.dateFormatter.inputDateFormat = "yyyy-MM-dd HH:mm";
       
-              var colorSet = new am4core.ColorSet();
-              colorSet.saturation = 0.4;
+        //       var colorSet = new am4core.ColorSet();
+        //       colorSet.saturation = 0.4;
       
       
-              chart.dateFormatter.dateFormat = "yyyy-MM-dd HH:mm";
-              chart.dateFormatter.inputDateFormat = "yyyy-MM-dd HH:mm";
+        //       chart.dateFormatter.dateFormat = "yyyy-MM-dd HH:mm";
+        //       chart.dateFormatter.inputDateFormat = "yyyy-MM-dd HH:mm";
       
-              var categoryAxis = chart.yAxes.push(new am4charts.CategoryAxis());
-              categoryAxis.dataFields.category = "category";
-              categoryAxis.renderer.grid.template.location = 0;
-              categoryAxis.renderer.inversed = true;
+        //       var categoryAxis = chart.yAxes.push(new am4charts.CategoryAxis());
+        //       categoryAxis.dataFields.category = "category";
+        //       categoryAxis.renderer.grid.template.location = 0;
+        //       categoryAxis.renderer.inversed = true;
       
-              var dateAxis = chart.xAxes.push(new am4charts.DateAxis());
-              dateAxis.renderer.minGridDistance = 70;
-              dateAxis.baseInterval = { count: 1, timeUnit: "day" };
-              // dateAxis.max = new Date(2018, 0, 1, 24, 0, 0, 0).getTime();
-              //dateAxis.strictMinMax = true;
-              dateAxis.renderer.tooltipLocation = 0;
+        //       var dateAxis = chart.xAxes.push(new am4charts.DateAxis());
+        //       dateAxis.renderer.minGridDistance = 70;
+        //       dateAxis.baseInterval = { count: 1, timeUnit: "day" };
+        //       // dateAxis.max = new Date(2018, 0, 1, 24, 0, 0, 0).getTime();
+        //       //dateAxis.strictMinMax = true;
+        //       dateAxis.renderer.tooltipLocation = 0;
       
-              var series1 = chart.series.push(new am4charts.ColumnSeries());
-              series1.columns.template.height = am4core.percent(70);
-              series1.columns.template.tooltipText = "{task}: [bold]{openDateX}[/] - [bold]{dateX}[/]";
+        //       var series1 = chart.series.push(new am4charts.ColumnSeries());
+        //       series1.columns.template.height = am4core.percent(70);
+        //       series1.columns.template.tooltipText = "{task}: [bold]{openDateX}[/] - [bold]{dateX}[/]";
       
-              series1.dataFields.openDateX = "start";
-              series1.dataFields.dateX = "end";
-              series1.dataFields.categoryY = "category";
-              series1.columns.template.propertyFields.fill = "color"; // get color from data
-              series1.columns.template.propertyFields.stroke = "color";
-              series1.columns.template.strokeOpacity = 1
+        //       series1.dataFields.openDateX = "start";
+        //       series1.dataFields.dateX = "end";
+        //       series1.dataFields.categoryY = "category";
+        //       series1.columns.template.propertyFields.fill = "color"; // get color from data
+        //       series1.columns.template.propertyFields.stroke = "color";
+        //       series1.columns.template.strokeOpacity = 1
                       
-              chart.scrollbarX = new am4core.Scrollbar();
+        //       chart.scrollbarX = new am4core.Scrollbar();
 
 
-    // axios.get('https://cmsdemoheroku.herokuapp.com/calendar_api/?Start_d=2021-1-1&End_d=2021-1-8')
-    //         .then(res => {
-    //             this.setState({compaigns: res.data.user_data.Process})
-    //         })
-    //         .catch((error) => {
-    //             console.log(error);
-    //     })
-
-    // axios.get("http://cmsdemoheroku.herokuapp.com/dashboard/?User_Id=" + 1)
-    //     .then((res) => {
-    //         this.setState({ dashboardData: res.data })
-            
-    //     })
-    //     .catch((error) => {
-                
-    //         console.log(error);
-    //     })
 
  
     }
