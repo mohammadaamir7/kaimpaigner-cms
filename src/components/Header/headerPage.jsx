@@ -51,7 +51,7 @@ export default class HeaderPage extends Component{
             pro_End_Date: new Date(),
             pro_Start_Date: new Date(),
             p_title: '',
-            data1: []
+            //data1: []
         }
     }
     
@@ -223,60 +223,93 @@ export default class HeaderPage extends Component{
             })
 
 
-            var data = []
-            var chart = am4core.create("chartdiv", am4charts.XYChart);
+        //     var data = []
+        //     var chart = am4core.create("chartdiv", am4charts.XYChart);
       
-            axios.get('https://kaimpaigner-cms-backend.herokuapp.com/api/ganttChart/' + localStorage.getItem('username'))
-            .then((res) => {
-                this.setState({ data1: res.data })
-                data = this.state.data1
+        //     axios.get('https://kaimpaigner-cms-backend.herokuapp.com/api/ganttChart/' + localStorage.getItem('username'))
+        //     .then((res) => {
+        //         this.setState({ data1: res.data })
+        //         data = this.state.data1
                 
-                chart.data = res.data
+        //         chart.data = res.data
                 
-            })
-            .catch((error) => {
-                console.log(error);
-          })
+        //     })
+        //     .catch((error) => {
+        //         console.log(error);
+        //   })
       
-          am4core.useTheme(am4themes_animated);
+        //   am4core.useTheme(am4themes_animated);
           
-              chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
+        //       chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
       
-              chart.paddingRight = 30;
-              chart.dateFormatter.inputDateFormat = "yyyy-MM-dd HH:mm";
+        //       chart.paddingRight = 30;
+        //       chart.dateFormatter.inputDateFormat = "yyyy-MM-dd HH:mm";
       
-              var colorSet = new am4core.ColorSet();
-              colorSet.saturation = 0.4;
+        //       var colorSet = new am4core.ColorSet();
+        //       colorSet.saturation = 0.4;
       
       
-              chart.dateFormatter.dateFormat = "yyyy-MM-dd HH:mm";
-              chart.dateFormatter.inputDateFormat = "yyyy-MM-dd HH:mm";
+        //       chart.dateFormatter.dateFormat = "yyyy-MM-dd HH:mm";
+        //       chart.dateFormatter.inputDateFormat = "yyyy-MM-dd HH:mm";
       
-              var categoryAxis = chart.yAxes.push(new am4charts.CategoryAxis());
-              categoryAxis.dataFields.category = "category";
-              categoryAxis.renderer.grid.template.location = 0;
-              categoryAxis.renderer.inversed = true;
+        //       var categoryAxis = chart.yAxes.push(new am4charts.CategoryAxis());
+        //       categoryAxis.dataFields.category = "category";
+        //       categoryAxis.renderer.grid.template.location = 0;
+        //       categoryAxis.renderer.inversed = true;
       
-              var dateAxis = chart.xAxes.push(new am4charts.DateAxis());
-              dateAxis.renderer.minGridDistance = 70;
-              dateAxis.baseInterval = { count: 1, timeUnit: "day" };
-              // dateAxis.max = new Date(2018, 0, 1, 24, 0, 0, 0).getTime();
-              //dateAxis.strictMinMax = true;
-              dateAxis.renderer.tooltipLocation = 0;
+        //       var dateAxis = chart.xAxes.push(new am4charts.DateAxis());
+        //       dateAxis.renderer.minGridDistance = 70;
+        //       dateAxis.baseInterval = { count: 1, timeUnit: "day" };
+        //       // dateAxis.max = new Date(2018, 0, 1, 24, 0, 0, 0).getTime();
+        //       //dateAxis.strictMinMax = true;
+        //       dateAxis.renderer.tooltipLocation = 0;
       
-              var series1 = chart.series.push(new am4charts.ColumnSeries());
-              series1.columns.template.height = am4core.percent(70);
-              series1.columns.template.tooltipText = "{task}: [bold]{openDateX}[/] - [bold]{dateX}[/]";
+        //       var series1 = chart.series.push(new am4charts.ColumnSeries());
+        //       series1.columns.template.height = am4core.percent(70);
+        //       series1.columns.template.tooltipText = "{task}: [bold]{openDateX}[/] - [bold]{dateX}[/]";
       
-              series1.dataFields.openDateX = "start";
-              series1.dataFields.dateX = "end";
-              series1.dataFields.categoryY = "category";
-              series1.columns.template.propertyFields.fill = "color"; // get color from data
-              series1.columns.template.propertyFields.stroke = "color";
-              series1.columns.template.strokeOpacity = 1
+        //       series1.dataFields.openDateX = "start";
+        //       series1.dataFields.dateX = "end";
+        //       series1.dataFields.categoryY = "category";
+        //       series1.columns.template.propertyFields.fill = "color"; // get color from data
+        //       series1.columns.template.propertyFields.stroke = "color";
+        //       series1.columns.template.strokeOpacity = 1
                       
-              chart.scrollbarX = new am4core.Scrollbar();
+        //       chart.scrollbarX = new am4core.Scrollbar();
 
+
+        let chart = am4core.create("chartdiv", am4charts.XYChart);
+
+        chart.paddingRight = 20;
+    
+        let data = [];
+        let visits = 10;
+        for (let i = 1; i < 366; i++) {
+          visits += Math.round((Math.random() < 0.5 ? 1 : -1) * Math.random() * 10);
+          data.push({ date: new Date(2018, 0, i), name: "name" + i, value: visits });
+        }
+    
+        chart.data = data;
+    
+        let dateAxis = chart.xAxes.push(new am4charts.DateAxis());
+        dateAxis.renderer.grid.template.location = 0;
+    
+        let valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+        valueAxis.tooltip.disabled = true;
+        valueAxis.renderer.minWidth = 35;
+    
+        let series = chart.series.push(new am4charts.LineSeries());
+        series.dataFields.dateX = "date";
+        series.dataFields.valueY = "value";
+    
+        series.tooltipText = "{valueY.value}";
+        chart.cursor = new am4charts.XYCursor();
+    
+        let scrollbarX = new am4charts.XYChartScrollbar();
+        scrollbarX.series.push(series);
+        chart.scrollbarX = scrollbarX;
+    
+        this.chart = chart;
 
 
  
@@ -3521,7 +3554,7 @@ export default class HeaderPage extends Component{
 
                             <br/><br/>
 
-                            {/* <div id='chartdiv' style={{width: '90%', height: '500px'}}></div> */}
+                            <div id='chartdiv' style={{width: '90%', height: '500px'}}></div>
 
                             <br/><br/><br/>
                             
